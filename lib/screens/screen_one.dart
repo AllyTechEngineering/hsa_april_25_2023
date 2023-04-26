@@ -54,11 +54,7 @@ class _ScreenOneState extends State<ScreenOne> {
                     height: heightElevatedButton,
                     child: ElevatedButton(
                       style: style,
-                      onPressed: () {
-                        setState(() {
-                          //TODO add setState code
-                        });
-                      },
+                      onPressed: () {},
                       child: const Text(
                         'About HSA',
                         textAlign: TextAlign.center,

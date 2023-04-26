@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 
-class ScreenNine extends StatefulWidget {
-  static String id = 'screen_nine';
+class ScreenTen extends StatefulWidget {
+  static String id = 'screen_ten';
 
-  const ScreenNine({super.key});
+  const ScreenTen({super.key});
 
   @override
-  State<ScreenNine> createState() => _ScreenNineState();
+  State<ScreenTen> createState() => _ScreenTenState();
 }
 
-class _ScreenNineState extends State<ScreenNine> {
+class _ScreenTenState extends State<ScreenTen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
