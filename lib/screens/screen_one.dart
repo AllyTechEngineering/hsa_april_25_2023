@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hsa_april_25_2023/screens/screen_eight.dart';
+import 'package:hsa_april_25_2023/screens/screen_five.dart';
+import 'package:hsa_april_25_2023/screens/screen_four.dart';
+import 'package:hsa_april_25_2023/screens/screen_nine.dart';
+import 'package:hsa_april_25_2023/screens/screen_seven.dart';
+import 'package:hsa_april_25_2023/screens/screen_six.dart';
+import 'package:hsa_april_25_2023/screens/screen_ten.dart';
+import 'package:hsa_april_25_2023/screens/screen_three.dart';
+import 'package:hsa_april_25_2023/screens/screen_two.dart';
 import '/utilities/constants.dart';
 
 class ScreenOne extends StatefulWidget {
@@ -54,7 +63,9 @@ class _ScreenOneState extends State<ScreenOne> {
                     height: heightElevatedButton,
                     child: ElevatedButton(
                       style: style,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenTwo.id);
+                      },
                       child: const Text(
                         'About HSA',
                         textAlign: TextAlign.center,
@@ -80,9 +91,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenThree.id);
                     },
                     child: const Text(
                       'Learn To Sail',
@@ -108,9 +117,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenFour.id);
                     },
                     child: const Text(
                       'Membership',
@@ -144,9 +151,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenFive.id);
                     },
                     child: const Text(
                       'Social Events',
@@ -172,9 +177,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenSix.id);
                     },
                     child: const Text(
                       'Race Schedule',
@@ -200,9 +203,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenSix.id);
                     },
                     child: const Text(
                       'RC Schedule',
@@ -236,9 +237,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenSeven.id);
                     },
                     child: const Text(
                       'Race Results',
@@ -264,9 +263,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenNine.id);
                     },
                     child: const Text(
                       'Crew Roster',
@@ -292,9 +289,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      setState(() {
-                        //TODO add setState code
-                      });
+                      Navigator.pushNamed(context, ScreenTen.id);
                     },
                     child: const Text(
                       'For Sale',
@@ -344,7 +339,7 @@ class _ScreenOneState extends State<ScreenOne> {
       debugShowCheckedModeBanner: false,
       title: titleText,
       home: Scaffold(
-        backgroundColor: Color(0xFFA5D7E8),
+        backgroundColor: const Color(scaffoldColor),
         appBar: AppBar(
           backgroundColor: const Color(darkestBlue),
           title: const FittedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScreenThree extends StatefulWidget {
   static String id = 'screen_three';
@@ -14,16 +15,86 @@ class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(lightBlue),
+      backgroundColor: const Color(scaffoldColor),
       appBar: AppBar(
-        backgroundColor: const Color(lightBlue),
-        title: const Center(
+        backgroundColor: const Color(darkestBlue),
+        title: const FittedBox(
+          fit: BoxFit.scaleDown,
           child: Text(
-            titleText,
-            style: TextStyle(color: Color(darkestBlue), fontWeight: FontWeight.bold, fontSize: 24),
+            'Learning to Sail',
+            style: TextStyle(
+              fontFamily: fontTypeForApp,
+              color: Color(lightBlue),
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
         ),
       ),
+      body: ListView(
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const Text(
+                  'Education/Certification',
+                  softWrap: true,
+                  style: TextStyle(
+                    fontFamily: fontTypeForApp,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              learningToSailText,
+              Padding(
+                padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
+                child: SizedBox(
+                  width: 250.0,
+                  height: 75.0,
+                  child: ElevatedButton(
+                    style: style,
+                    onPressed: () {
+                      // _launchUrl();
+                      _launchURLBrowser();
+                    },
+                    child: const Text(
+                      'Click For More Info About Education',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(lightBlue),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ], //children
+          ),
+        ], //children
+      ),
     );
   } //Widget
+
+  Widget learningToSailText = const Padding(
+    padding: EdgeInsets.all(20.0),
+    child: Text(
+      learningToSail,
+      style: TextStyle(fontSize: 18, color: Colors.black),
+      softWrap: true,
+    ),
+  );
+
+  _launchURLBrowser() async {
+    var url = Uri.parse(huestonSailingLearningUrl);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    } //else
+  } //_launchURLBrowser
 } //class

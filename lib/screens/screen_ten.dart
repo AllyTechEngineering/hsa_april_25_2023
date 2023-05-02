@@ -14,14 +14,29 @@ class _ScreenTenState extends State<ScreenTen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(lightBlue),
+      backgroundColor: const Color(scaffoldColor),
       appBar: AppBar(
-        backgroundColor: const Color(lightBlue),
-        title: const Center(
+        backgroundColor: const Color(darkestBlue),
+        title: const FittedBox(
+          fit: BoxFit.scaleDown,
           child: Text(
-            titleText,
-            style: TextStyle(color: Color(darkestBlue), fontWeight: FontWeight.bold, fontSize: 24),
+            'For Sale',
+            style: TextStyle(
+              fontFamily: fontTypeForApp,
+              color: Color(lightBlue),
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
+        ),
+      ),
+      body: Center(
+        child: TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Back'),
         ),
       ),
     );

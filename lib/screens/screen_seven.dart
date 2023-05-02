@@ -11,18 +11,37 @@ class ScreenSeven extends StatefulWidget {
 }
 
 class _ScreenSevenState extends State<ScreenSeven> {
+  List<String> raceAndRcSchedule = [
+    april23RaceText,
+    april30RaceText,
+    may6RaceText,
+    may7RaceText,
+    may14RaceText,
+    may20RaceText,
+    may21RaceText,
+    may28RaceText,
+    may29RaceText
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(lightBlue),
+      backgroundColor: const Color(scaffoldColor),
       appBar: AppBar(
-        backgroundColor: const Color(lightBlue),
-        title: const Center(
-          child: Text(
-            titleText,
-            style: TextStyle(color: Color(darkestBlue), fontWeight: FontWeight.bold, fontSize: 24),
-          ),
+        title: Text('Race Schedule List'),
+      ),
+      body: ListView.builder(
+        itemCount: raceAndRcSchedule.length,
+        prototypeItem: ListTile(
+          title: Text(raceAndRcSchedule.first),
         ),
+        itemBuilder: (context, index) {
+          return Card(
+            child: ListTile(
+              title: Text(raceAndRcSchedule[index]),
+              tileColor: Colors.red,
+            ),
+          );
+        },
       ),
     );
   } //Widget
