@@ -22,7 +22,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
           child: Text(
             'About Hueston Sailing Assn.',
             style: TextStyle(
-              fontFamily: fontTypeForApp,
+              fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   'About HSA',
                   softWrap: true,
                   style: TextStyle(
-                    fontFamily: fontTypeForApp,
+                    fontFamily: kFontTypeForApp,
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                     color: Colors.black,

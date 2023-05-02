@@ -23,7 +23,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           child: Text(
             'Learning to Sail',
             style: TextStyle(
-              fontFamily: fontTypeForApp,
+              fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -44,7 +44,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                   'Education/Certification',
                   softWrap: true,
                   style: TextStyle(
-                    fontFamily: fontTypeForApp,
+                    fontFamily: kFontTypeForApp,
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                     color: Colors.black,

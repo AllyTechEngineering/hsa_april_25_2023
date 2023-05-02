@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hsa_april_25_2023/screens/screen_eight.dart';
 import 'package:hsa_april_25_2023/screens/screen_five.dart';
@@ -24,7 +25,7 @@ class _ScreenOneState extends State<ScreenOne> {
   Widget build(BuildContext context) {
     // This is the "title row" of the tutorial
     Widget titleSection = Container(
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.only(left: 5.0, right: 5.0, top: 5.0, bottom: 5.0),
       child: Row(
         children: [
           Expanded(
@@ -47,7 +48,7 @@ class _ScreenOneState extends State<ScreenOne> {
 
 // I changed this so that I can have a row of elevated buttons with onPressed and setState
     Widget buttonSectionOne = Padding(
-      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: buttonRowSpacingTop, bottom: 0.0),
+      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: kButtonRowSpacingTop, bottom: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -59,18 +60,19 @@ class _ScreenOneState extends State<ScreenOne> {
                 margin: const EdgeInsets.only(top: 8),
                 child: Center(
                   child: SizedBox(
-                    width: widthElevatedButton,
-                    height: heightElevatedButton,
+                    width: kWidthElevatedButton,
+                    height: kHeightElevatedButton,
                     child: ElevatedButton(
                       style: style,
                       onPressed: () {
                         Navigator.pushNamed(context, ScreenTwo.id);
                       },
-                      child: const Text(
+                      child: const AutoSizeText(
                         'About HSA',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Color(lightBlue),
+                          color: Color(kFontColor),
+                          fontSize: kFontHeight,
                         ),
                       ),
                     ),
@@ -86,18 +88,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenThree.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Learn To Sail',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -112,18 +115,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenFour.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Membership',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -135,7 +139,7 @@ class _ScreenOneState extends State<ScreenOne> {
       ),
     );
     Widget buttonSectionTwo = Padding(
-      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: buttonRowSpacingTop, bottom: 0.0),
+      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: kButtonRowSpacingTop, bottom: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -146,18 +150,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenFive.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Social Events',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -172,18 +177,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenSix.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Race Schedule',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -198,18 +204,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      Navigator.pushNamed(context, ScreenSix.id);
+                      Navigator.pushNamed(context, ScreenSeven.id);
                     },
-                    child: const Text(
-                      'RC Schedule',
+                    child: const AutoSizeText(
+                      'RC Duty Schedule',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -221,7 +228,7 @@ class _ScreenOneState extends State<ScreenOne> {
       ),
     );
     Widget buttonSectionThree = Padding(
-      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: buttonRowSpacingTop, bottom: buttonRowSpacingBottom),
+      padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: kButtonRowSpacingTop, bottom: buttonRowSpacingBottom),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -232,18 +239,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
-                      Navigator.pushNamed(context, ScreenSeven.id);
+                      Navigator.pushNamed(context, ScreenEight.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Race Results',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -258,18 +266,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenNine.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'Crew Roster',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -284,18 +293,19 @@ class _ScreenOneState extends State<ScreenOne> {
               Container(
                 margin: const EdgeInsets.only(top: 8),
                 child: SizedBox(
-                  width: widthElevatedButton,
-                  height: heightElevatedButton,
+                  width: kWidthElevatedButton,
+                  height: kHeightElevatedButton,
                   child: ElevatedButton(
                     style: style,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenTen.id);
                     },
-                    child: const Text(
+                    child: const AutoSizeText(
                       'For Sale',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(lightBlue),
+                        color: Color(kFontColor),
+                        fontSize: kFontHeight,
                       ),
                     ),
                   ),
@@ -316,7 +326,7 @@ class _ScreenOneState extends State<ScreenOne> {
             copyRightText,
             softWrap: true,
             style: TextStyle(
-              fontFamily: fontTypeForApp,
+              fontFamily: kFontTypeForApp,
               fontWeight: FontWeight.bold,
               fontSize: 12,
               color: Color(darkestBlue),
@@ -328,9 +338,15 @@ class _ScreenOneState extends State<ScreenOne> {
     Widget socialMediaRow = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _buildButtonColumn(Color(darkestBlue), Icons.facebook, 'FaceBook'),
-        _buildButtonColumn(Color(darkestBlue), Icons.web_asset_outlined, 'Website'),
-        _buildButtonColumn(Color(darkestBlue), Icons.email_outlined, 'Email'),
+        ElevatedButton.icon(
+          style: style,
+          onPressed: () {},
+          icon: Icon(
+            Icons.facebook_outlined,
+            size: 40.0,
+          ),
+          label: Text('Facebook'),
+        ),
       ],
     );
 
@@ -347,8 +363,8 @@ class _ScreenOneState extends State<ScreenOne> {
             child: Text(
               titleText,
               style: TextStyle(
-                fontFamily: fontTypeForApp,
-                color: Color(lightBlue),
+                fontFamily: kFontTypeForApp,
+                color: Color(kFontColor),
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 overflow: TextOverflow.ellipsis,
@@ -400,8 +416,8 @@ class _ScreenOneState extends State<ScreenOne> {
           child: Text(
             label,
             style: TextStyle(
-              fontSize: 20,
-              fontFamily: 'AnticSlab',
+              fontSize: kFontHeight,
+              fontFamily: kFontTypeForApp,
               fontWeight: FontWeight.bold,
               color: color,
             ),

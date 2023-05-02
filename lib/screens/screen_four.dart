@@ -24,7 +24,7 @@ class _ScreenFourState extends State<ScreenFour> {
           child: Text(
             'Membership',
             style: TextStyle(
-              fontFamily: fontTypeForApp,
+              fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class _ScreenFourState extends State<ScreenFour> {
                   'Join the Club!',
                   softWrap: true,
                   style: TextStyle(
-                    fontFamily: fontTypeForApp,
+                    fontFamily: kFontTypeForApp,
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                     color: Colors.black,
