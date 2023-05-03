@@ -83,27 +83,27 @@ const String netScoreText11 = '';
 const String noteText11 = '';
 
 const String rank1TotalText =
-    '\n$rankText$rankText1 $sailText$sailNumberText1 $skipperText$skipperText1 $crewText$crewText1 $netText$netScoreText1 $noteText$noteText1';
+    '\n$rankText$rankText1 $sailText$sailNumberText1 $skipperText$skipperText1 $crewText$crewText1 $netText$netScoreText1 $noteText$noteText1\n';
 const String rank2TotalText =
-    '\n$rankText$rankText2$sailText$sailNumberText2$skipperText$skipperText2$crewText$crewText2$netText$netScoreText2$noteText$noteText2';
+    '\n$rankText$rankText2$sailText$sailNumberText2$skipperText$skipperText2$crewText$crewText2$netText$netScoreText2$noteText$noteText2\n';
 const String rank3TotalText =
-    '\n$rankText$rankText3$sailText$sailNumberText3$skipperText$skipperText3$crewText$crewText3$netText$netScoreText3$noteText$noteText3';
+    '\n$rankText$rankText3$sailText$sailNumberText3$skipperText$skipperText3$crewText$crewText3$netText$netScoreText3$noteText$noteText3\n';
 const String rank4TotalText =
-    '\n$rankText$rankText4$sailText$sailNumberText4$skipperText$skipperText4$crewText$crewText4$netText$netScoreText4$noteText$noteText4';
+    '\n$rankText$rankText4$sailText$sailNumberText4$skipperText$skipperText4$crewText$crewText4$netText$netScoreText4$noteText$noteText4\n';
 const String rank5TotalText =
-    '\n$rankText$rankText5$sailText$sailNumberText5$skipperText$skipperText5$crewText$crewText5$netText$netScoreText5$noteText$noteText5';
+    '\n$rankText$rankText5$sailText$sailNumberText5$skipperText$skipperText5$crewText$crewText5$netText$netScoreText5$noteText$noteText5\n';
 const String rank6TotalText =
-    '\n$rankText$rankText6$sailText$sailNumberText6$skipperText$skipperText6$crewText$crewText6$netText$netScoreText6$noteText$noteText6';
+    '\n$rankText$rankText6$sailText$sailNumberText6$skipperText$skipperText6$crewText$crewText6$netText$netScoreText6$noteText$noteText6\n';
 const String rank7TotalText =
-    '\n$rankText$rankText7$sailText$sailNumberText7$skipperText$skipperText7$crewText$crewText7$netText$netScoreText7$noteText$noteText7';
+    '\n$rankText$rankText7$sailText$sailNumberText7$skipperText$skipperText7$crewText$crewText7$netText$netScoreText7$noteText$noteText7\n';
 const String rank8TotalText =
-    '\n$rankText$rankText8$sailText$sailNumberText8$skipperText$skipperText8$crewText$crewText8$netText$netScoreText8$noteText$noteText8';
+    '\n$rankText$rankText8$sailText$sailNumberText8$skipperText$skipperText8$crewText$crewText8$netText$netScoreText8$noteText$noteText8\n';
 const String rank9TotalText =
-    '\n$rankText$rankText9$sailText$sailNumberText9$skipperText$skipperText9$crewText$crewText9$netText$netScoreText9$noteText$noteText9';
+    '\n$rankText$rankText9$sailText$sailNumberText9$skipperText$skipperText9$crewText$crewText9$netText$netScoreText9$noteText$noteText9\n';
 const String rank10TotalText =
-    '\n$rankText$rankText10$sailText$sailNumberText10$skipperText$skipperText10$crewText$crewText10$netText$netScoreText10$noteText$noteText10';
+    '\n$rankText$rankText10$sailText$sailNumberText10$skipperText$skipperText10$crewText$crewText10$netText$netScoreText10$noteText$noteText10\n';
 const String rank11TotalText =
-    '\n$rankText$rankText11$sailText$sailNumberText11$skipperText$skipperText11$crewText$crewText11$netText$netScoreText11$noteText$noteText1';
+    '\n$rankText$rankText11$sailText$sailNumberText11$skipperText$skipperText11$crewText$crewText11$netText$netScoreText11$noteText$noteText1\n';
 
 List<String> raceResults = [
   rank1TotalText,

@@ -90,7 +90,7 @@ class _ScreenThreeState extends State<ScreenThree> {
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(huestonSailingLearningUrl);
+    var url = Uri.parse(kHuestonSailingLearningUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {

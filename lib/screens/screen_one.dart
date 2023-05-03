@@ -9,6 +9,7 @@ import 'package:hsa_april_25_2023/screens/screen_six.dart';
 import 'package:hsa_april_25_2023/screens/screen_ten.dart';
 import 'package:hsa_april_25_2023/screens/screen_three.dart';
 import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '/utilities/constants.dart';
 
 class ScreenOne extends StatefulWidget {
@@ -123,7 +124,7 @@ class _ScreenOneState extends State<ScreenOne> {
                       Navigator.pushNamed(context, ScreenFour.id);
                     },
                     child: const AutoSizeText(
-                      'Membership',
+                      'Join the Club',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(kFontColor),
@@ -340,9 +341,12 @@ class _ScreenOneState extends State<ScreenOne> {
       children: [
         ElevatedButton.icon(
           style: style,
-          onPressed: () {},
+          onPressed: () {
+            _launchURLBrowser();
+          },
           icon: Icon(
             Icons.facebook_outlined,
+            color: Color(kFontColor),
             size: 40.0,
           ),
           label: Text('Facebook'),
@@ -429,4 +433,13 @@ class _ScreenOneState extends State<ScreenOne> {
       ], //children
     );
   } //Column
+
+  _launchURLBrowser() async {
+    var url = Uri.parse(kHuestonSailingFacebookPage);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    } //else
+  } //_launchURLBrowser
 } //class

@@ -99,7 +99,7 @@ class _ScreenFourState extends State<ScreenFour> {
   // }
 
   _launchURLBrowser() async {
-    var url = Uri.parse(huestonSailingMembershipUrl);
+    var url = Uri.parse(kHuestonSailingMembershipUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
