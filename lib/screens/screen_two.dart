@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScreenTwo extends StatefulWidget {
   static String id = 'screen_two';
@@ -50,9 +51,31 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   ),
                 ),
               ),
-              aboutHsaSection,
+              // aboutHsaSection,
+              Padding(
+                padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
+                child: SizedBox(
+                  width: 250.0,
+                  height: 75.0,
+                  child: ElevatedButton(
+                    style: styleElevatedButton,
+                    onPressed: () {
+                      // _launchUrl();
+                      _launchURLBrowser();
+                    },
+                    child: const Text(
+                      'Click For HSA News Letter',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(lightBlue),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ], //children
           ),
+          aboutHsaSection,
         ], //children
       ),
     );
@@ -66,4 +89,13 @@ class _ScreenTwoState extends State<ScreenTwo> {
       softWrap: true,
     ),
   );
+
+  _launchURLBrowser() async {
+    var url = Uri.parse(kHsaNewsLetterUrl);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    } //else
+  } //_launchURLBrowser
 } //class

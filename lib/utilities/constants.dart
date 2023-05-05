@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 // Color scheme https://colorhunt.co/palette/0b244719376d576cbca5d7e8
-const String titleText = 'Huestion Sailing Association';
+const String titleText = 'Hueston Sailing Association';
+// const AppBar styleAppBar = ();
 const BoxDecoration styleBoxDecoration = (BoxDecoration(
   gradient: LinearGradient(
     colors: [Color(kDarkestBlue), Color(kMediumBlue)],
@@ -22,15 +23,16 @@ const BoxDecoration styleBoxDecoration = (BoxDecoration(
     bottomLeft: Radius.circular(20.0),
   ),
 ));
-final ButtonStyle style = ElevatedButton.styleFrom(
-    side: const BorderSide(width: 2, color: Colors.black, style: BorderStyle.solid),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(buttonRadiusValue),
-    ),
-    backgroundColor: const Color(kDarkBlue),
-    padding: const EdgeInsets.only(left: 6.0, right: 6.0, top: 0.0, bottom: 0.0),
-    elevation: 15.0,
-    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: kFontTypeForApp, color: Color(lightBlue)));
+final ButtonStyle styleElevatedButton = ElevatedButton.styleFrom(
+  side: const BorderSide(width: 2, color: Colors.black, style: BorderStyle.solid),
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(buttonRadiusValue),
+  ),
+  backgroundColor: const Color(kDarkBlue),
+  padding: const EdgeInsets.only(left: 6.0, right: 6.0, top: 0.0, bottom: 0.0),
+  elevation: 15.0,
+  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: kFontTypeForApp, color: Color(lightBlue)),
+);
 const double kContainerHeight = 110.0;
 const double kContainerFontHeight = 14.0;
 const double kAppBarFontHeight = 20.0;
@@ -39,6 +41,7 @@ const double kFontHeight = 14.0;
 const int kFontColor = 0xFFFFFFFF;
 const int kIconColor = 0xFFFF0000;
 const String kHsaYouTubeUrl = 'https://www.youtube.com/channel/UC5ymqSnOM51K7USJ__lIz8w';
+const String kHsaNewsLetterUrl = 'http://www.huestonsailing.com/HSA_Newsletter.html';
 const double kSocialMediaIconHeight = 50.0;
 const double kSocialMediaIconWidth = 135.0;
 const double kSocialMediaFontHeight = 10.0;

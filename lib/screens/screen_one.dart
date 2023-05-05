@@ -40,16 +40,16 @@ class _ScreenOneState extends State<ScreenOne> {
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
                     child: ElevatedButton(
-                      style: style,
+                      style: styleElevatedButton,
                       onPressed: () {
                         Navigator.pushNamed(context, ScreenTwo.id);
                       },
                       child: const AutoSizeText(
-                        'About HSA',
+                        'Newsletter & About',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(kFontColor),
-                          fontSize: kFontHeight,
+                          fontSize: 12.0,
                         ),
                       ),
                     ),
@@ -68,7 +68,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenThree.id);
                     },
@@ -95,7 +95,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenFour.id);
                     },
@@ -130,7 +130,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenFive.id);
                     },
@@ -157,7 +157,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenSix.id);
                     },
@@ -184,7 +184,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenSeven.id);
                     },
@@ -219,7 +219,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenEight.id);
                     },
@@ -246,7 +246,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenNine.id);
                     },
@@ -273,7 +273,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenTen.id);
                     },
@@ -319,7 +319,7 @@ class _ScreenOneState extends State<ScreenOne> {
           width: kSocialMediaIconWidth,
           height: kSocialMediaIconHeight,
           child: ElevatedButton.icon(
-            style: style,
+            style: styleElevatedButton,
             onPressed: () {
               _launchURLBrowser();
             },
@@ -349,7 +349,7 @@ class _ScreenOneState extends State<ScreenOne> {
           width: kSocialMediaIconWidth,
           height: kSocialMediaIconHeight,
           child: ElevatedButton.icon(
-            style: style,
+            style: styleElevatedButton,
             onPressed: () {
               _launchYouTubeURLBrowser();
             },
@@ -400,28 +400,36 @@ class _ScreenOneState extends State<ScreenOne> {
             ),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Image.asset(
-                  'images/HSALogo.png',
-                  width: logoWidthValue,
-                  height: logoHeightValue,
-                  fit: BoxFit.fitHeight,
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/OceanBackgroundWithOutBackgroundImage.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Image.asset(
+                    'images/HSALogo.png',
+                    width: logoWidthValue,
+                    height: logoHeightValue,
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
-              ),
-              // titleSection,
-              buttonSectionOne,
-              buttonSectionTwo,
-              buttonSectionThree,
-              socialMediaRow,
-              textSection,
-            ],
+                // titleSection,
+                buttonSectionOne,
+                buttonSectionTwo,
+                buttonSectionThree,
+                socialMediaRow,
+                textSection,
+              ],
+            ),
           ),
         ),
       ),

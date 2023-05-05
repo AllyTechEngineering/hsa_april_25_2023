@@ -58,7 +58,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                   width: 250.0,
                   height: 75.0,
                   child: ElevatedButton(
-                    style: style,
+                    style: styleElevatedButton,
                     onPressed: () {
                       // _launchUrl();
                       _launchURLBrowser();
