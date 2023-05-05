@@ -24,30 +24,6 @@ class ScreenOne extends StatefulWidget {
 class _ScreenOneState extends State<ScreenOne> {
   @override
   Widget build(BuildContext context) {
-    // This is the "title row" of the tutorial
-    Widget titleSection = Container(
-      padding: const EdgeInsets.only(left: 5.0, right: 5.0, top: 5.0, bottom: 5.0),
-      child: Row(
-        children: [
-          Expanded(
-            /*1*/
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                /*2*/
-                Container(
-                  padding: const EdgeInsets.only(bottom: 8),
-                ),
-              ], //children
-            ),
-          ),
-        ],
-      ),
-    );
-    // TODO Step 3: Implement the button row - method call
-    // Color color = Theme.of(context).primaryColor;
-
-// I changed this so that I can have a row of elevated buttons with onPressed and setState
     Widget buttonSectionOne = Padding(
       padding: const EdgeInsets.only(left: 0.0, right: 0.0, top: kButtonRowSpacingTop, bottom: 0.0),
       child: Row(
@@ -330,26 +306,74 @@ class _ScreenOneState extends State<ScreenOne> {
               fontFamily: kFontTypeForApp,
               fontWeight: FontWeight.bold,
               fontSize: 12,
-              color: Color(darkestBlue),
+              color: Color(kDarkestBlue),
             ),
           ),
         ),
       ),
     );
     Widget socialMediaRow = Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        ElevatedButton.icon(
-          style: style,
-          onPressed: () {
-            _launchURLBrowser();
-          },
-          icon: Icon(
-            Icons.facebook_outlined,
-            color: Color(kFontColor),
-            size: 40.0,
+        SizedBox(
+          width: kSocialMediaIconWidth,
+          height: kSocialMediaIconHeight,
+          child: ElevatedButton.icon(
+            style: style,
+            onPressed: () {
+              _launchURLBrowser();
+            },
+            icon: const Padding(
+              padding: EdgeInsets.only(left: 5.0, right: 0.0, top: 5.0, bottom: 5.0),
+              child: Icon(
+                Icons.facebook_outlined,
+                color: Color(kFontColor),
+                size: 40.0,
+              ),
+            ),
+            label: const Padding(
+              padding: EdgeInsets.only(left: 0.0, right: 5.0, top: 0.0, bottom: 0.0),
+              child: Text(
+                'Facebook',
+                style: TextStyle(
+                  fontFamily: kFontTypeForApp,
+                  fontWeight: FontWeight.bold,
+                  fontSize: kSocialMediaFontHeight,
+                  color: Color(kFontColor),
+                ),
+              ),
+            ),
           ),
-          label: Text('Facebook'),
+        ),
+        SizedBox(
+          width: kSocialMediaIconWidth,
+          height: kSocialMediaIconHeight,
+          child: ElevatedButton.icon(
+            style: style,
+            onPressed: () {
+              _launchYouTubeURLBrowser();
+            },
+            icon: const Padding(
+              padding: EdgeInsets.only(left: 5.0, right: 0.0, top: 5.0, bottom: 5.0),
+              child: Icon(
+                Icons.youtube_searched_for_sharp,
+                color: Color(kFontColor),
+                size: 40.0,
+              ),
+            ),
+            label: const Padding(
+              padding: EdgeInsets.only(left: 0.0, right: 5.0, top: 0.0, bottom: 0.0),
+              child: Text(
+                'YouTube',
+                style: TextStyle(
+                  fontFamily: kFontTypeForApp,
+                  fontWeight: FontWeight.bold,
+                  fontSize: kSocialMediaFontHeight,
+                  color: Color(kFontColor),
+                ),
+              ),
+            ),
+          ),
         ),
       ],
     );
@@ -361,7 +385,7 @@ class _ScreenOneState extends State<ScreenOne> {
       home: Scaffold(
         backgroundColor: const Color(scaffoldColor),
         appBar: AppBar(
-          backgroundColor: const Color(darkestBlue),
+          backgroundColor: const Color(kDarkestBlue),
           title: const FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
@@ -369,7 +393,7 @@ class _ScreenOneState extends State<ScreenOne> {
               style: TextStyle(
                 fontFamily: kFontTypeForApp,
                 color: Color(kFontColor),
-                fontSize: 30,
+                fontSize: kAppBarFontHeight,
                 fontWeight: FontWeight.bold,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -404,38 +428,17 @@ class _ScreenOneState extends State<ScreenOne> {
     );
   } //Widget Build
 
-  //Widget build(BuildContext context)
-  Column _buildButtonColumn(Color color, IconData icon, String label) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          icon,
-          color: color,
-          size: iconHeightValue,
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 8),
-          child: Text(
-            label,
-            style: TextStyle(
-              fontSize: kFontHeight,
-              fontFamily: kFontTypeForApp,
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 20.0,
-        )
-      ], //children
-    );
-  } //Column
-
   _launchURLBrowser() async {
     var url = Uri.parse(kHuestonSailingFacebookPage);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    } //else
+  } //_launchURLBrowser
+
+  _launchYouTubeURLBrowser() async {
+    var url = Uri.parse(kHsaYouTubeUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {

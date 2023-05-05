@@ -17,7 +17,7 @@ class _ScreenThreeState extends State<ScreenThree> {
     return Scaffold(
       backgroundColor: const Color(scaffoldColor),
       appBar: AppBar(
-        backgroundColor: const Color(darkestBlue),
+        backgroundColor: const Color(kDarkestBlue),
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
@@ -25,7 +25,7 @@ class _ScreenThreeState extends State<ScreenThree> {
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
-              fontSize: 30,
+              fontSize: kAppBarFontHeight,
               fontWeight: FontWeight.bold,
               overflow: TextOverflow.ellipsis,
             ),
@@ -38,9 +38,9 @@ class _ScreenThreeState extends State<ScreenThree> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: const Text(
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
                   'Education/Certification',
                   softWrap: true,
                   style: TextStyle(

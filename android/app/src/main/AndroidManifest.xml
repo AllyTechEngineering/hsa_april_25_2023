@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hsa_april_25_2023">
    <application
-        android:label="hsa_april_25_2023"
+        android:label="HSA"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
