@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenTwo extends StatefulWidget {
-  static String id = 'screen_two';
+class ScreenFourteen extends StatefulWidget {
+  static String id = 'screen_fourteen';
 
-  const ScreenTwo({super.key});
+  const ScreenFourteen({super.key});
 
   @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
+  State<ScreenFourteen> createState() => _ScreenFourteenState();
 }
 
-class _ScreenTwoState extends State<ScreenTwo> {
+class _ScreenFourteenState extends State<ScreenFourteen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'About Hueston Sailing Assn.',
+            'Public Sailing Program Four',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -47,16 +47,6 @@ class _ScreenTwoState extends State<ScreenTwo> {
               children: [
                 const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'About HSA',
-                    softWrap: true,
-                    style: TextStyle(
-                      fontFamily: kFontTypeForApp,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Colors.black,
-                    ),
-                  ),
                 ),
                 // aboutHsaSection,
                 Padding(
@@ -71,7 +61,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                         _launchURLBrowser();
                       },
                       child: const Text(
-                        'Click For HSA News Letter',
+                        kPublicSailingProgramFourText,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(lightBlue),
@@ -82,28 +72,48 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
               ], //children
             ),
-            aboutHsaSection,
+            publicSailingProgram,
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                child: new Image.asset('images/sailBoatBlackAndWhite.png'),
+                alignment: Alignment.center,
+              ),
+            ),
           ], //children
         ),
       ),
     );
   } //Widget
 
-  Widget aboutHsaSection = const Padding(
+  Widget publicSailingProgram = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      aboutHsa,
+      kSailingExperienceText,
       style: TextStyle(fontSize: 18, color: Colors.black),
       softWrap: true,
     ),
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(kHsaNewsLetterUrl);
+    var url = Uri.parse(kHuestonSailingLearningUrl);
     if (await canLaunchUrl(url)) {
+      print('Entered into the IF part of the URL launch');
       await launchUrl(url);
     } else {
-      throw 'Could not launch $url';
+      // throw 'Could not launch $url';
+      print('Entered into the throw');
+      throw showDialog(
+        context: context,
+        builder: (_) => const AlertDialog(
+          title: Text(
+            'No Internet connection',
+            style: TextStyle(color: Colors.redAccent),
+          ),
+          elevation: 20,
+          backgroundColor: Colors.black,
+        ),
+      );
     } //else
   } //_launchURLBrowser
 } //class

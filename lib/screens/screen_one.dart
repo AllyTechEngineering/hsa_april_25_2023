@@ -1,16 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:hsa_april_25_2023/screens/screen_eight.dart';
-import 'package:hsa_april_25_2023/screens/screen_five.dart';
-import 'package:hsa_april_25_2023/screens/screen_four.dart';
-import 'package:hsa_april_25_2023/screens/screen_nine.dart';
-import 'package:hsa_april_25_2023/screens/screen_seven.dart';
-import 'package:hsa_april_25_2023/screens/screen_six.dart';
-import 'package:hsa_april_25_2023/screens/screen_ten.dart';
-import 'package:hsa_april_25_2023/screens/screen_three.dart';
-import 'package:hsa_april_25_2023/screens/screen_two.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '/utilities/constants.dart';
+import '/controllers/controller_screen_one.dart';
 
 class ScreenOne extends StatefulWidget {
   static String id = 'screen_one';
@@ -39,20 +30,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: ElevatedButton(
-                      style: styleElevatedButton,
-                      onPressed: () {
-                        Navigator.pushNamed(context, ScreenTwo.id);
-                      },
-                      child: const AutoSizeText(
-                        'Newsletter & About',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Color(kFontColor),
-                          fontSize: 12.0,
-                        ),
-                      ),
-                    ),
+                    child: buildElevatedButtonScreenTwo(context),
                   ),
                 ),
               ),
@@ -67,20 +45,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenThree.id);
-                    },
-                    child: const AutoSizeText(
-                      'Learn To Sail',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenThree(context),
                 ),
               ),
             ], //children
@@ -94,20 +59,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenFour.id);
-                    },
-                    child: const AutoSizeText(
-                      'Join the Club',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenFour(context),
                 ),
               ),
             ], //children
@@ -129,20 +81,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenFive.id);
-                    },
-                    child: const AutoSizeText(
-                      'Social Events',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenFive(context),
                 ),
               ),
             ], //children
@@ -156,20 +95,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenSix.id);
-                    },
-                    child: const AutoSizeText(
-                      'Race Schedule',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenSix(context),
                 ),
               ),
             ], //children
@@ -183,20 +109,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenSeven.id);
-                    },
-                    child: const AutoSizeText(
-                      'RC Duty Schedule',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenSeven(context),
                 ),
               ),
             ], //children
@@ -218,20 +131,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenEight.id);
-                    },
-                    child: const AutoSizeText(
-                      'Race Results',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenEight(context),
                 ),
               ),
             ], //children
@@ -245,20 +145,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenNine.id);
-                    },
-                    child: const AutoSizeText(
-                      'Crew Roster',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenNine(context),
                 ),
               ),
             ], //children
@@ -272,20 +159,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: ElevatedButton(
-                    style: styleElevatedButton,
-                    onPressed: () {
-                      Navigator.pushNamed(context, ScreenTen.id);
-                    },
-                    child: const AutoSizeText(
-                      'For Sale',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(kFontColor),
-                        fontSize: kFontHeight,
-                      ),
-                    ),
-                  ),
+                  child: buildElevatedButtonScreenTen(context),
                 ),
               ),
             ], //children
@@ -381,7 +255,7 @@ class _ScreenOneState extends State<ScreenOne> {
     // This was the top of the tutorial and all sections are integrated here
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: titleText,
+      title: kHsaTitleText,
       home: Scaffold(
         backgroundColor: const Color(scaffoldColor),
         appBar: AppBar(
@@ -389,7 +263,7 @@ class _ScreenOneState extends State<ScreenOne> {
           title: const FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
-              titleText,
+              kHsaTitleText,
               style: TextStyle(
                 fontFamily: kFontTypeForApp,
                 color: Color(kFontColor),
@@ -434,7 +308,7 @@ class _ScreenOneState extends State<ScreenOne> {
         ),
       ),
     );
-  } //Widget Build
+  }
 
   _launchURLBrowser() async {
     var url = Uri.parse(kHuestonSailingFacebookPage);

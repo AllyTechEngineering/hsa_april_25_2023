@@ -33,47 +33,55 @@ class _ScreenFourState extends State<ScreenFour> {
           ),
         ),
       ),
-      body: ListView(
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Join the Club!',
-                  softWrap: true,
-                  style: TextStyle(
-                    fontFamily: kFontTypeForApp,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              membershipTextSection,
-              SizedBox(
-                width: 250.0,
-                height: 75.0,
-                child: ElevatedButton(
-                  style: styleElevatedButton,
-                  onPressed: () {
-                    // _launchUrl();
-                    _launchURLBrowser();
-                  },
-                  child: const Text(
-                    'Click For Membership Info',
-                    textAlign: TextAlign.center,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/OceanBackgroundWithOutBackgroundImage.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView(
+          children: <Widget>[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Join the Club!',
+                    softWrap: true,
                     style: TextStyle(
-                      color: Color(lightBlue),
+                      fontFamily: kFontTypeForApp,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ),
-              ),
-            ], //children
-          ),
-        ], //children
+                SizedBox(
+                  width: 250.0,
+                  height: 75.0,
+                  child: ElevatedButton(
+                    style: styleElevatedButton,
+                    onPressed: () {
+                      // _launchUrl();
+                      _launchURLBrowser();
+                    },
+                    child: const Text(
+                      'Click For Membership Info',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFFFFFFFF),
+                      ),
+                    ),
+                  ),
+                ),
+                membershipTextSection,
+              ], //children
+            ),
+          ], //children
+        ),
       ),
     );
   } //Widget
@@ -82,7 +90,7 @@ class _ScreenFourState extends State<ScreenFour> {
     padding: EdgeInsets.all(20.0),
     child: Text(
       membershipText,
-      style: TextStyle(fontSize: 18, color: Colors.black),
+      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(kDarkestBlue)),
       softWrap: true,
     ),
   );

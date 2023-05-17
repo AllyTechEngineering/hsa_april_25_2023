@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hsa_april_25_2023/screens/screen_eight.dart';
+import 'package:hsa_april_25_2023/screens/screen_eleven.dart';
 import 'package:hsa_april_25_2023/screens/screen_five.dart';
 import 'package:hsa_april_25_2023/screens/screen_four.dart';
+import 'package:hsa_april_25_2023/screens/screen_fourteen.dart';
 import 'package:hsa_april_25_2023/screens/screen_nine.dart';
 import 'package:hsa_april_25_2023/screens/screen_seven.dart';
 import 'package:hsa_april_25_2023/screens/screen_six.dart';
 import 'package:hsa_april_25_2023/screens/screen_ten.dart';
+import 'package:hsa_april_25_2023/screens/screen_thirteen.dart';
 import 'package:hsa_april_25_2023/screens/screen_three.dart';
+import 'package:hsa_april_25_2023/screens/screen_twelve.dart';
 import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import '/utilities/constants.dart';
+
 import '/screens/screen_one.dart';
 
 // void main() => runApp(const HsaApp());
@@ -43,6 +49,10 @@ class _HsaAppState extends State<HsaApp> {
         ScreenEight.id: (context) => const ScreenEight(),
         ScreenNine.id: (context) => const ScreenNine(),
         ScreenTen.id: (context) => const ScreenTen(),
+        ScreenEleven.id: (context) => const ScreenEleven(),
+        ScreenTwelve.id: (context) => const ScreenTwelve(),
+        ScreenThirteen.id: (context) => const ScreenThirteen(),
+        ScreenFourteen.id: (context) => const ScreenFourteen(),
       },
     );
   } //Widget Build
