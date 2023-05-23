@@ -13,7 +13,9 @@ import 'package:hsa_april_25_2023/screens/screen_thirteen.dart';
 import 'package:hsa_april_25_2023/screens/screen_three.dart';
 import 'package:hsa_april_25_2023/screens/screen_twelve.dart';
 import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import '../screens/spring_race_results.dart';
 import '/utilities/constants.dart';
+import '../screens/race_results_screen.dart';
 
 ElevatedButton buildElevatedButtonScreenTwo(BuildContext context) {
   return ElevatedButton(
@@ -121,7 +123,7 @@ ElevatedButton buildElevatedButtonScreenEight(BuildContext context) {
   return ElevatedButton(
     style: styleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, ScreenEight.id);
+      Navigator.pushNamed(context, RaceResults.id);
     },
     child: const AutoSizeText(
       'Race Results',
@@ -235,3 +237,157 @@ ElevatedButton buildElevatedButtonScreenFourteen(BuildContext context) {
     ),
   );
 } //ElevatedButton
+
+/// Race results
+ElevatedButton buildElevatedButtonSpringRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, SpringRaceResults.id);
+    },
+    child: const AutoSizeText(
+      'Spring Race Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonFoundersDaySunfishResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Founders day Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonMemorialDayRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Memorial Day Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButton4thJuyRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      '4th of July Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonCamptownSunfishRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Camptown Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonFallRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Fall Race Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonAugustoSunfishRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Augusto Race Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonLaborDayRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'Labor Day Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build
+
+ElevatedButton buildElevatedButtonOktoberFastSunfishRaceResults(BuildContext context) {
+  return ElevatedButton(
+    style: styleElevatedButton,
+    onPressed: () {
+      Navigator.pushNamed(context, ScreenTwo.id);
+    },
+    child: const AutoSizeText(
+      'OktoberFast Results',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Color(kFontColor),
+        fontSize: kFontHeightSmall,
+      ),
+    ),
+  );
+} //Widget Build

@@ -1,20 +1,19 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import '../models/race_results.dart';
-import '/utilities/constants.dart';
 import 'dart:convert';
 
-/// Race Results
-class ScreenEight extends StatefulWidget {
-  static String id = 'screen_eight';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-  const ScreenEight({super.key});
+import '../utilities/constants.dart';
+
+class FoundersDaySunfishResults extends StatefulWidget {
+  static String id = 'founders_day_sunfish_regional_regatta_results';
+  const FoundersDaySunfishResults({Key? key}) : super(key: key);
 
   @override
-  State<ScreenEight> createState() => _ScreenEightState();
+  State<FoundersDaySunfishResults> createState() => _FoundersDaySunfishResultsState();
 }
 
-class _ScreenEightState extends State<ScreenEight> {
+class _FoundersDaySunfishResultsState extends State<FoundersDaySunfishResults> {
   List jsonRaceResults = [];
   late Map _map;
   // Fetch content from the json file
@@ -37,9 +36,8 @@ class _ScreenEightState extends State<ScreenEight> {
     super.initState();
     // Call the readJson method when the app starts
     readJson();
-  }
+  } //initState
 
-  // Race results
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +47,7 @@ class _ScreenEightState extends State<ScreenEight> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Race Results',
+            '2023 Spring Race Results',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),

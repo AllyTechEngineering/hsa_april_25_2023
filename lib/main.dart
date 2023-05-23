@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hsa_april_25_2023/screens/race_results_screen.dart';
 import 'package:hsa_april_25_2023/screens/screen_eight.dart';
 import 'package:hsa_april_25_2023/screens/screen_eleven.dart';
 import 'package:hsa_april_25_2023/screens/screen_five.dart';
@@ -13,6 +14,8 @@ import 'package:hsa_april_25_2023/screens/screen_thirteen.dart';
 import 'package:hsa_april_25_2023/screens/screen_three.dart';
 import 'package:hsa_april_25_2023/screens/screen_twelve.dart';
 import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import 'package:hsa_april_25_2023/screens/spring_race_results.dart';
+import 'package:hsa_april_25_2023/screens/founders_day_sunfish_regional_regatta_results.dart';
 import '/utilities/constants.dart';
 
 import '/screens/screen_one.dart';
@@ -53,6 +56,9 @@ class _HsaAppState extends State<HsaApp> {
         ScreenTwelve.id: (context) => const ScreenTwelve(),
         ScreenThirteen.id: (context) => const ScreenThirteen(),
         ScreenFourteen.id: (context) => const ScreenFourteen(),
+        SpringRaceResults.id: (context) => const SpringRaceResults(),
+        FoundersDaySunfishResults.id: (context) => const FoundersDaySunfishResults(),
+        RaceResults.id: (context) => const RaceResults(),
       },
     );
   } //Widget Build
