@@ -63,9 +63,8 @@ class _ScreenFourState extends State<ScreenFour> {
                   width: 250.0,
                   height: 75.0,
                   child: ElevatedButton(
-                    style: styleElevatedButton,
+                    style: kStyleElevatedButton,
                     onPressed: () {
-                      // _launchUrl();
                       _launchURLBrowser();
                     },
                     child: const Text(
@@ -94,17 +93,6 @@ class _ScreenFourState extends State<ScreenFour> {
       softWrap: true,
     ),
   );
-
-  // void htmlOpenLink() {
-  //   String url = 'https://flutter.dev';
-  //   html.window.open(url, '_blank');
-  // }
-
-  // Future<void> _launchUrl() async {
-  //   if (!await launchUrl(_url)) {
-  //     throw Exception('Could not launch $_url');
-  //   }
-  // }
 
   _launchURLBrowser() async {
     var url = Uri.parse(kHuestonSailingMembershipUrl);

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hsa_april_25_2023/screens/memorial_day_series_results.dart';
+import 'package:hsa_april_25_2023/screens/memorial_handicap_results.dart';
+import 'package:hsa_april_25_2023/screens/memorial_hobie_results.dart';
+import 'package:hsa_april_25_2023/screens/memorial_yflyer_results.dart';
 import 'package:hsa_april_25_2023/screens/race_results_screen.dart';
 import 'package:hsa_april_25_2023/screens/screen_eight.dart';
 import 'package:hsa_april_25_2023/screens/screen_eleven.dart';
@@ -14,8 +18,11 @@ import 'package:hsa_april_25_2023/screens/screen_thirteen.dart';
 import 'package:hsa_april_25_2023/screens/screen_three.dart';
 import 'package:hsa_april_25_2023/screens/screen_twelve.dart';
 import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import 'package:hsa_april_25_2023/screens/spring_handicap_results.dart';
+import 'package:hsa_april_25_2023/screens/spring_hobie_results.dart';
 import 'package:hsa_april_25_2023/screens/spring_race_results.dart';
 import 'package:hsa_april_25_2023/screens/founders_day_sunfish_regional_regatta_results.dart';
+import 'package:hsa_april_25_2023/screens/spring_yflyer_results.dart';
 import '/utilities/constants.dart';
 
 import '/screens/screen_one.dart';
@@ -59,6 +66,13 @@ class _HsaAppState extends State<HsaApp> {
         SpringRaceResults.id: (context) => const SpringRaceResults(),
         FoundersDaySunfishResults.id: (context) => const FoundersDaySunfishResults(),
         RaceResults.id: (context) => const RaceResults(),
+        SpringHobieResults.id: (context) => const SpringHobieResults(),
+        SpringYflyerResults.id: (context) => const SpringYflyerResults(),
+        SpringHandicapResults.id: (context) => const SpringHandicapResults(),
+        MemorialDayRaceResults.id: (context) => const MemorialDayRaceResults(),
+        MemorialHobieResults.id: (context) => const MemorialHobieResults(),
+        MemorialYflyerResults.id: (context) => const MemorialYflyerResults(),
+        MemorialHandicapResults.id: (context) => const MemorialHandicapResults(),
       },
     );
   } //Widget Build

@@ -30,7 +30,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonFoundersDaySunfishResults(context),
+                    child: buildElevatedButtonScreenTwo(context),
                   ),
                 ),
               ),
@@ -193,7 +193,7 @@ class _ScreenOneState extends State<ScreenOne> {
           width: kSocialMediaIconWidth,
           height: kSocialMediaIconHeight,
           child: ElevatedButton.icon(
-            style: styleElevatedButton,
+            style: kStyleElevatedButton,
             onPressed: () {
               _launchURLBrowser();
             },
@@ -223,7 +223,7 @@ class _ScreenOneState extends State<ScreenOne> {
           width: kSocialMediaIconWidth,
           height: kSocialMediaIconHeight,
           child: ElevatedButton.icon(
-            style: styleElevatedButton,
+            style: kStyleElevatedButton,
             onPressed: () {
               _launchYouTubeURLBrowser();
             },

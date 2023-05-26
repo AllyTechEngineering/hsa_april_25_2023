@@ -55,7 +55,7 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
                     width: 250.0,
                     height: 75.0,
                     child: ElevatedButton(
-                      style: styleElevatedButton,
+                      style: kStyleElevatedButton,
                       onPressed: () {
                         // _launchUrl();
                         _launchURLBrowser();

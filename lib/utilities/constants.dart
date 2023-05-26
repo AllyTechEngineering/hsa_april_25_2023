@@ -38,7 +38,7 @@ const BoxDecoration styleBoxDecoration = (BoxDecoration(
     bottomLeft: Radius.circular(20.0),
   ),
 ));
-final ButtonStyle styleElevatedButton = ElevatedButton.styleFrom(
+final ButtonStyle kStyleElevatedButton = ElevatedButton.styleFrom(
   side: const BorderSide(width: 2, color: Color(kLightestBlue), style: BorderStyle.solid),
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(buttonRadiusValue),
@@ -55,6 +55,7 @@ const double kAppBarFontHeight = 20.0;
 const String kFontTypeForApp = 'Roboto-Thin';
 const double kFontHeightMedium = 14.0;
 const double kFontHeightSmall = 12.0;
+const double kFontHeightLarge = 20.0;
 const int kFontColor = 0xFFFFFFFF;
 const int kIconColor = 0xFFFF0000;
 const String kHsaYouTubeUrl = 'https://www.youtube.com/channel/UC5ymqSnOM51K7USJ__lIz8w';
@@ -68,6 +69,8 @@ const double kButtonRowSpacingTop = 1.0;
 const double buttonRowSpacingBottom = 20.0;
 const double kWidthElevatedButton = 110.0;
 const double kHeightElevatedButton = 65.0;
+const double kWidthSpringResultsElevatedButton = 200.0;
+const double kHeightSpringResultsElevatedButton = 75.0;
 const double logoHeightValue = 200.0;
 const double logoWidthValue = 300.0;
 const int kDarkestBlue = 0xFF0B2447;

@@ -1,7 +1,7 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../utilities/constants.dart';
+import '../utilities/widgets.dart';
 
 class SpringRaceResults extends StatefulWidget {
   static String id = 'spring_race_results';
@@ -12,30 +12,6 @@ class SpringRaceResults extends StatefulWidget {
 }
 
 class _SpringRaceResultsState extends State<SpringRaceResults> {
-  List jsonRaceResults = [];
-  late Map _map;
-  // Fetch content from the json file
-  Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/23Spring-Handicap.json');
-    final data = await json.decode(response);
-    _map = (data['competitors']);
-    List competitors = _map.keys.toList();
-    int compIndex = _map.length;
-    for (int i = 0; i < compIndex; i++) {
-      compIndex--;
-      jsonRaceResults.add(
-          'Rank: ${_map[competitors[compIndex]]['comprank']}, Sail No: ${_map[competitors[compIndex]]['compsailno']}, Skipper: ${_map[competitors[compIndex]]['comphelmname']}, Crew: ${_map[competitors[compIndex]]['comphelmname']}, Notes: ${_map[competitors[compIndex]]['compnotes']} ');
-    } // for loop
-    setState(() {});
-  } // readJson
-
-  @override
-  void initState() {
-    super.initState();
-    // Call the readJson method when the app starts
-    readJson();
-  } //initState
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +24,7 @@ class _SpringRaceResultsState extends State<SpringRaceResults> {
             '2023 Spring Race Results',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
-              color: Color(lightBlue),
+              color: Color(kFontColor),
               fontSize: kAppBarFontHeight,
               fontWeight: FontWeight.bold,
               overflow: TextOverflow.ellipsis,
@@ -56,31 +32,35 @@ class _SpringRaceResultsState extends State<SpringRaceResults> {
           ),
         ),
       ),
-      body: ListView.separated(
-        padding: const EdgeInsets.all(8),
-        itemCount: jsonRaceResults.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            decoration: styleBoxDecoration,
-            height: kContainerHeight,
-            // color: Colors.white,
-            // color: Colors.amber[colorCodes[index]],
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  jsonRaceResults[index],
-                  style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: kContainerFontHeight, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.left,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/OceanBackgroundWithOutBackgroundImage.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Image.asset(
+                  'images/HSALogo.png',
+                  width: logoWidthValue,
+                  height: logoHeightValue,
+                  fit: BoxFit.fitHeight,
                 ),
               ),
-            ),
-          );
-        },
-        separatorBuilder: (BuildContext context, int index) => const Divider(
-          height: 25.0,
+              const ButtonSectionHobieSpringWidget(),
+              const ButtonSectionYflyerSpringWidget(),
+              const ButtonSectionHandicapSpringWidget(),
+            ],
+          ),
         ),
       ),
     );
-  } //Widget//Widget
+  } //Widget
 } //class

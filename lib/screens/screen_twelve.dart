@@ -55,7 +55,7 @@ class _ScreenTwelveState extends State<ScreenTwelve> {
                     width: 250.0,
                     height: 75.0,
                     child: ElevatedButton(
-                      style: styleElevatedButton,
+                      style: kStyleElevatedButton,
                       onPressed: () {
                         // _launchUrl();
                         _launchURLBrowser();

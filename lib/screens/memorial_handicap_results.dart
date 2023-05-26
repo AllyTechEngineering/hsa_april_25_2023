@@ -1,24 +1,21 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../utilities/constants.dart';
 
-class FoundersDaySunfishResults extends StatefulWidget {
-  static String id = 'founders_day_sunfish_regional_regatta_results';
-  const FoundersDaySunfishResults({Key? key}) : super(key: key);
+class MemorialHandicapResults extends StatefulWidget {
+  static String id = 'memorial_handicap_results';
+  const MemorialHandicapResults({Key? key}) : super(key: key);
 
   @override
-  State<FoundersDaySunfishResults> createState() => _FoundersDaySunfishResultsState();
+  State<MemorialHandicapResults> createState() => _MemorialHandicapResultsState();
 }
 
-class _FoundersDaySunfishResultsState extends State<FoundersDaySunfishResults> {
+class _MemorialHandicapResultsState extends State<MemorialHandicapResults> {
   List jsonRaceResults = [];
   late Map _map;
-  // Fetch content from the json file
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/23Sunfish-FoundersDay-Regional.json');
+    final String response = await rootBundle.loadString('assets/dummy_data.json');
     final data = await json.decode(response);
     _map = (data['competitors']);
     List competitors = _map.keys.toList();
@@ -28,14 +25,12 @@ class _FoundersDaySunfishResultsState extends State<FoundersDaySunfishResults> {
       jsonRaceResults.add(
           'Rank: ${_map[competitors[compIndex]]['comprank']}, Sail No: ${_map[competitors[compIndex]]['compsailno']}, Skipper: ${_map[competitors[compIndex]]['comphelmname']}, Crew: ${_map[competitors[compIndex]]['comphelmname']}, Notes: ${_map[competitors[compIndex]]['compnotes']} ');
     } // for loop
-    print('This is the jsonRaceResults list: $jsonRaceResults');
     setState(() {});
   } // readJson
 
   @override
   void initState() {
     super.initState();
-    // Call the readJson method when the app starts
     readJson();
   } //initState
 
@@ -48,7 +43,7 @@ class _FoundersDaySunfishResultsState extends State<FoundersDaySunfishResults> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            '2023 Founder\'s Day Race Results',
+            '2023 Memorial Day Series Handicap Results',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -85,5 +80,5 @@ class _FoundersDaySunfishResultsState extends State<FoundersDaySunfishResults> {
         ),
       ),
     );
-  } //Widget//Widget
+  }
 } //class

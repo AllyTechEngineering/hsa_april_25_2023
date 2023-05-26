@@ -19,7 +19,7 @@ import '../screens/race_results_screen.dart';
 
 ElevatedButton buildElevatedButtonScreenTwo(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenTwo.id);
     },
@@ -36,7 +36,7 @@ ElevatedButton buildElevatedButtonScreenTwo(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenThree(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenThree.id);
     },
@@ -53,7 +53,7 @@ ElevatedButton buildElevatedButtonScreenThree(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenFour(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenFour.id);
     },
@@ -70,7 +70,7 @@ ElevatedButton buildElevatedButtonScreenFour(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenFive(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenFive.id);
     },
@@ -87,7 +87,7 @@ ElevatedButton buildElevatedButtonScreenFive(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenSix(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenSix.id);
     },
@@ -104,7 +104,7 @@ ElevatedButton buildElevatedButtonScreenSix(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenSeven(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenSeven.id);
     },
@@ -121,7 +121,7 @@ ElevatedButton buildElevatedButtonScreenSeven(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenEight(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, RaceResults.id);
     },
@@ -138,7 +138,7 @@ ElevatedButton buildElevatedButtonScreenEight(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenNine(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenNine.id);
     },
@@ -155,7 +155,7 @@ ElevatedButton buildElevatedButtonScreenNine(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenTen(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenTen.id);
     },
@@ -172,7 +172,7 @@ ElevatedButton buildElevatedButtonScreenTen(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenEleven(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenEleven.id);
     },
@@ -189,7 +189,7 @@ ElevatedButton buildElevatedButtonScreenEleven(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenTwelve(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenTwelve.id);
     },
@@ -206,7 +206,7 @@ ElevatedButton buildElevatedButtonScreenTwelve(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenThirteen(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenThirteen.id);
     },
@@ -223,7 +223,7 @@ ElevatedButton buildElevatedButtonScreenThirteen(BuildContext context) {
 
 ElevatedButton buildElevatedButtonScreenFourteen(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, ScreenFourteen.id);
     },
@@ -241,148 +241,12 @@ ElevatedButton buildElevatedButtonScreenFourteen(BuildContext context) {
 /// Race results
 ElevatedButton buildElevatedButtonSpringRaceResults(BuildContext context) {
   return ElevatedButton(
-    style: styleElevatedButton,
+    style: kStyleElevatedButton,
     onPressed: () {
       Navigator.pushNamed(context, SpringRaceResults.id);
     },
     child: const AutoSizeText(
       'Spring Race Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonFoundersDaySunfishResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Founders day Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonMemorialDayRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Memorial Day Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButton4thJuyRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      '4th of July Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonCamptownSunfishRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Camptown Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonFallRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Fall Race Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonAugustoSunfishRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Augusto Race Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonLaborDayRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'Labor Day Results',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Color(kFontColor),
-        fontSize: kFontHeightSmall,
-      ),
-    ),
-  );
-} //Widget Build
-
-ElevatedButton buildElevatedButtonOktoberFastSunfishRaceResults(BuildContext context) {
-  return ElevatedButton(
-    style: styleElevatedButton,
-    onPressed: () {
-      Navigator.pushNamed(context, ScreenTwo.id);
-    },
-    child: const AutoSizeText(
-      'OktoberFast Results',
       textAlign: TextAlign.center,
       style: TextStyle(
         color: Color(kFontColor),
