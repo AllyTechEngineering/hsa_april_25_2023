@@ -1,14 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hsa_april_25_2023/screens/founders_day_sunfish_regional_regatta_results.dart';
 import 'package:hsa_april_25_2023/screens/memorial_day_series_results.dart';
-import 'package:hsa_april_25_2023/screens/memorial_handicap_results.dart';
-import 'package:hsa_april_25_2023/screens/memorial_hobie_results.dart';
-import 'package:hsa_april_25_2023/screens/memorial_yflyer_results.dart';
-import 'package:hsa_april_25_2023/screens/spring_handicap_results.dart';
-import 'package:hsa_april_25_2023/screens/spring_hobie_results.dart';
-import 'package:hsa_april_25_2023/screens/spring_yflyer_results.dart';
+import 'package:hsa_april_25_2023/screens/screen_race_results_all.dart';
 import '../controllers/controller_screen_one.dart';
 import '../screens/screen_two.dart';
 import 'constants.dart';
@@ -458,7 +451,7 @@ ElevatedButton buildElevatedButtonSpringHobieRaceResults(BuildContext context) {
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, SpringHobieResults.id, arguments: 1);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 1);
     },
     child: const AutoSizeText(
       'Hobie Race Results',
@@ -475,7 +468,7 @@ ElevatedButton buildElevatedButtonSpingYflyerRaceResults(BuildContext context) {
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, SpringYflyerResults.id, arguments: 2);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 2);
     },
     child: const AutoSizeText(
       'Y-Flyer Results',
@@ -492,7 +485,7 @@ ElevatedButton buildElevatedButtonSpringHandicapRaceResults(BuildContext context
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, SpringHandicapResults.id, arguments: 3);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 3);
     },
     child: const AutoSizeText(
       'Handicap Results',
@@ -509,7 +502,7 @@ ElevatedButton buildElevatedButtonHobieMemorialRaceResults(BuildContext context)
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, MemorialHobieResults.id);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 6);
     },
     child: const AutoSizeText(
       'Hobie Race Results',
@@ -526,7 +519,7 @@ ElevatedButton buildElevatedButtonYflyerMemorialRaceResults(BuildContext context
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, MemorialYflyerResults.id);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 7);
     },
     child: const AutoSizeText(
       'Y-Flyer Results',
@@ -543,7 +536,7 @@ ElevatedButton buildElevatedButtonHandicapMemorialRaceResults(BuildContext conte
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, MemorialHandicapResults.id);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 8);
     },
     child: const AutoSizeText(
       'Handicap Results',
@@ -560,7 +553,7 @@ ElevatedButton buildElevatedButtonFoundersDaySunfishResults(BuildContext context
   return ElevatedButton(
     style: kStyleElevatedButton,
     onPressed: () {
-      Navigator.pushNamed(context, FoundersDaySunfishResults.id);
+      Navigator.pushNamed(context, ScreenRaceResultsAll.id, arguments: 5);
     },
     child: const AutoSizeText(
       'Founders day Results',
