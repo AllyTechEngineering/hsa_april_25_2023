@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hsa_april_25_2023/controllers/json_parse.dart';
 import '../utilities/constants.dart';
-import '../controllers/json_parse.dart';
 
 class ScreenRaceResultsAll extends StatefulWidget {
   static String id = 'screen_race_results_all';
@@ -21,10 +19,11 @@ class _ScreenRaceResultsAllState extends State<ScreenRaceResultsAll> {
   }
 
   static int widgetCounter = 0;
-  List jsonRaceResults = [];
+  List<String> jsonRaceResults = [];
   late Map _map;
   static String raceNameText = 'Default';
   static String raceFileName = 'assets/dummy_data.json';
+
 // Fetch content from the json file
   Future<void> readJson() async {
     final String response = await rootBundle.loadString(raceFileName);
@@ -36,30 +35,109 @@ class _ScreenRaceResultsAllState extends State<ScreenRaceResultsAll> {
       compIndex--;
       jsonRaceResults.add(
           'Rank: ${_map[competitors[compIndex]]['comprank']}, Sail No: ${_map[competitors[compIndex]]['compsailno']}, Skipper: ${_map[competitors[compIndex]]['comphelmname']}, Crew: ${_map[competitors[compIndex]]['comphelmname']}, Notes: ${_map[competitors[compIndex]]['compnotes']} ');
-    } // for loop
+    } //for
     setState(() {});
   } // readJson
 
   /// get data out of Widget
   void getJsonFileNameAndSeriesText(String tempValue) {
-    print('This is the widgetCounter first entering of the getJsonFileNameAndSeriesText method: $widgetCounter');
     if (widgetCounter < 1 && tempValue == '1') {
       switchForJsonFileName(tempValue);
       widgetCounter = 0;
-      print('widgetCounter in if statement hobie: $widgetCounter');
     }
     if (widgetCounter < 1 && tempValue == '2') {
       switchForJsonFileName(tempValue);
       widgetCounter = 0;
-      print('widgetCounter in if statement Y: $widgetCounter');
     }
     if (widgetCounter < 1 && tempValue == '3') {
       switchForJsonFileName(tempValue);
       widgetCounter = 0;
-      print('widgetCounter in if statement Handicap: $widgetCounter');
+    }
+    if (widgetCounter < 1 && tempValue == '4') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '5') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '6') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '7') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '8') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '9') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '10') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '11') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '12') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '13') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '14') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '15') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '16') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '17') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '18') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '19') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '20') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '21') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '22') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '23') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
+    }
+    if (widgetCounter < 1 && tempValue == '24') {
+      switchForJsonFileName(tempValue);
+      widgetCounter = 0;
     }
     widgetCounter++;
-    print('This is the widgetCounter exiting of the getJsonFileNameAndSeriesText method: $widgetCounter');
   } //getJsonFileNameAndSeriesText
 
   void switchForJsonFileName(String tempValue) {
