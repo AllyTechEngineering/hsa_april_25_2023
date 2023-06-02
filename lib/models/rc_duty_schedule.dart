@@ -9,7 +9,7 @@ const String may21RaceText = 'May 21: 4th Spring Race Committee: Mike Stratton, 
 const String may28RaceText = 'May 28: Memorial Day Series Race Committee: Pete Peters, Rose Schultz, Curt Donahue';
 const String may29RaceText = 'May 29: Memorial Day Series Race Committee: Pete Peters, Rose Schultz, Curt Donahue';
 const String june3RaceText = 'June 3: Evening Sail With Full Moon Race Committee: none.';
-const String june4RaceText = 'June 4: Spring Race Committee: Stephen Cooke, Charlie Buchert, Bill Lambert';
+const String june4RaceText = 'June 4: 5th Spring Race Committee: Stephen Cooke, Charlie Buchert, Bill Lambert';
 const String june11RaceText = 'June 11: Special Fun Race Committee: TBD';
 const String june18RaceText = 'June 18: 6th Spring Race Committee: Charlie Buchert, Diane Pierok, Dominiek Everaet';
 const String june24RaceText = 'June 24: Introduction to Sailing Race Committee: TBD';
@@ -50,7 +50,6 @@ List<String> rcDutySchedule = [
   may28RaceText,
   may29RaceText,
   june3RaceText,
-  june4RaceText,
   june4RaceText,
   june18RaceText,
   june24RaceText,

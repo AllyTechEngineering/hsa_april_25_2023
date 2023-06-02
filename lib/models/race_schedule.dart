@@ -9,7 +9,7 @@ const String may21RaceText = 'May 21: 4th Spring Race - Fleets: Handicap, Hobie,
 const String may28RaceText = 'May 28: Memorial Day Series Race - Fleets: Handicap, Hobie, Y-Flyer, Cruisers.';
 const String may29RaceText = 'May 29: Memorial Day Series Race - Fleets: Handicap, Hobie, Y-Flyer, Cruisers.';
 const String june3RaceText = 'June 3: Evening Sail With Full Moon - Fleets: All.';
-const String june4RaceText = 'June 4: Spring Race - Fleets: Handicap, Hobie, Y-Flyer, Cruisers.';
+const String june4RaceText = 'June 4: 5th Spring Race (race clinic before event) - Fleets: Handicap, Hobie, Y-Flyer, Cruisers.';
 const String june11RaceText = 'June 11: Special Fun Race';
 const String june18RaceText = 'June 18: 6th Spring Race - Fleets: Handicap, Hobie, Y-Flyer, Cruisers.';
 const String june24RaceText = 'June 24: Introduction to Sailing - Education.';
@@ -51,7 +51,6 @@ List<String> raceAndRcSchedule = [
   may29RaceText,
   june3RaceText,
   june4RaceText,
-  june4RaceText,
   june18RaceText,
   june24RaceText,
   june25RaceText,
@@ -64,6 +63,7 @@ List<String> raceAndRcSchedule = [
   july12RaceText,
   july16RaceText,
   july22RaceText,
+  july23RaceText,
   july30RaceText,
   august6RaceText,
   august13RaceText,

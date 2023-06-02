@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hsa_april_25_2023/screens/4th_of_july_results.dart';
+import 'package:hsa_april_25_2023/screens/fall_series_results_screen.dart';
+import 'package:hsa_april_25_2023/screens/labor_day_series_results_screen.dart';
 import 'package:hsa_april_25_2023/screens/memorial_day_series_results.dart';
 import 'package:hsa_april_25_2023/screens/race_results_screen.dart';
-import 'package:hsa_april_25_2023/screens/screen_eight.dart';
-import 'package:hsa_april_25_2023/screens/screen_eleven.dart';
-import 'package:hsa_april_25_2023/screens/screen_five.dart';
-import 'package:hsa_april_25_2023/screens/screen_four.dart';
-import 'package:hsa_april_25_2023/screens/screen_fourteen.dart';
-import 'package:hsa_april_25_2023/screens/screen_nine.dart';
+import 'package:hsa_april_25_2023/screens/intro_sailing_screen.dart';
+import 'package:hsa_april_25_2023/screens/social_events_screen.dart';
+import 'package:hsa_april_25_2023/screens/membership_screen.dart';
+import 'package:hsa_april_25_2023/screens/public_sailing_4_screen.dart';
+import 'package:hsa_april_25_2023/screens/crew_roster_screen.dart';
 import 'package:hsa_april_25_2023/screens/screen_race_results_all.dart';
-import 'package:hsa_april_25_2023/screens/screen_seven.dart';
-import 'package:hsa_april_25_2023/screens/screen_six.dart';
-import 'package:hsa_april_25_2023/screens/screen_ten.dart';
-import 'package:hsa_april_25_2023/screens/screen_thirteen.dart';
-import 'package:hsa_april_25_2023/screens/screen_three.dart';
-import 'package:hsa_april_25_2023/screens/screen_twelve.dart';
-import 'package:hsa_april_25_2023/screens/screen_two.dart';
+import 'package:hsa_april_25_2023/screens/race_duty_screen.dart';
+import 'package:hsa_april_25_2023/screens/race_schedule_screen.dart';
+import 'package:hsa_april_25_2023/screens/classified_ads_screen.dart';
+import 'package:hsa_april_25_2023/screens/public_sailing_3_screen.dart';
+import 'package:hsa_april_25_2023/screens/public_sailing_program_screen.dart';
+import 'package:hsa_april_25_2023/screens/public_sailing_2_screen.dart';
+import 'package:hsa_april_25_2023/screens/about_hsa_screen.dart';
 import 'package:hsa_april_25_2023/screens/spring_race_results.dart';
-import 'package:hsa_april_25_2023/screens/founders_day_sunfish_regional_regatta_results.dart';
 import 'package:hsa_april_25_2023/screens/spring_yflyer_results.dart';
-import '/utilities/constants.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-import '/screens/screen_one.dart';
+import '/screens/main_menu_screen.dart';
 
 // void main() => runApp(const HsaApp());
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const HsaApp());
 }
@@ -40,31 +42,32 @@ class HsaApp extends StatefulWidget {
 class _HsaAppState extends State<HsaApp> {
   @override
   Widget build(BuildContext context) {
-    // This was the top of the tutorial and all sections are integrated here
+    FlutterNativeSplash.remove();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: ScreenOne.id,
+      initialRoute: MainMenuScreen.id,
       routes: {
-        ScreenOne.id: (context) => const ScreenOne(),
-        ScreenTwo.id: (context) => const ScreenTwo(),
-        ScreenThree.id: (context) => const ScreenThree(),
-        ScreenFour.id: (context) => const ScreenFour(),
-        ScreenFive.id: (context) => const ScreenFive(),
-        ScreenSix.id: (context) => const ScreenSix(),
-        ScreenSeven.id: (context) => const ScreenSeven(),
-        ScreenEight.id: (context) => const ScreenEight(),
-        ScreenNine.id: (context) => const ScreenNine(),
-        ScreenTen.id: (context) => const ScreenTen(),
-        ScreenEleven.id: (context) => const ScreenEleven(),
-        ScreenTwelve.id: (context) => const ScreenTwelve(),
-        ScreenThirteen.id: (context) => const ScreenThirteen(),
-        ScreenFourteen.id: (context) => const ScreenFourteen(),
+        MainMenuScreen.id: (context) => const MainMenuScreen(),
+        AboutHsaScreen.id: (context) => const AboutHsaScreen(),
+        PublicSailingProgramScreen.id: (context) => const PublicSailingProgramScreen(),
+        MembershipScreen.id: (context) => const MembershipScreen(),
+        SocialEventsScreen.id: (context) => const SocialEventsScreen(),
+        RaceScheduleScreen.id: (context) => const RaceScheduleScreen(),
+        RaceDutyScreen.id: (context) => const RaceDutyScreen(),
+        CrewRosterScreen.id: (context) => const CrewRosterScreen(),
+        ClassifiedAdsScreen.id: (context) => const ClassifiedAdsScreen(),
+        IntroToSailingScreen.id: (context) => const IntroToSailingScreen(),
+        PublicSailing2Screen.id: (context) => const PublicSailing2Screen(),
+        PublicSailing3Screen.id: (context) => const PublicSailing3Screen(),
+        PublicSailing4Screen.id: (context) => const PublicSailing4Screen(),
         SpringRaceResults.id: (context) => const SpringRaceResults(),
-        FoundersDaySunfishResults.id: (context) => const FoundersDaySunfishResults(),
         RaceResults.id: (context) => const RaceResults(),
         SpringYflyerResults.id: (context) => const SpringYflyerResults(),
         MemorialDayRaceResults.id: (context) => const MemorialDayRaceResults(),
         ScreenRaceResultsAll.id: (context) => const ScreenRaceResultsAll(),
+        FourthOfJulyRaceResults.id: (context) => const FourthOfJulyRaceResults(),
+        FallSeriesRaceResults.id: (context) => const FallSeriesRaceResults(),
+        LaborDaySeriesResults.id: (context) => const LaborDaySeriesResults(),
       },
     );
   } //Widget Build

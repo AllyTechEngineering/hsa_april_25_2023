@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
+// import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenTwo extends StatefulWidget {
-  static String id = 'screen_two';
+class MembershipScreen extends StatefulWidget {
+  static String id = 'membership_screen';
 
-  const ScreenTwo({super.key});
+  const MembershipScreen({super.key});
 
   @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
+  State<MembershipScreen> createState() => _MembershipScreenState();
 }
 
-class _ScreenTwoState extends State<ScreenTwo> {
+class _MembershipScreenState extends State<MembershipScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'About Hueston Sailing Assn.',
+            'Membership',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -48,7 +49,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'About HSA',
+                    'Join the Club!',
                     softWrap: true,
                     style: TextStyle(
                       fontFamily: kFontTypeForApp,
@@ -58,48 +59,43 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     ),
                   ),
                 ),
-                // aboutHsaSection,
-                Padding(
-                  padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
-                  child: SizedBox(
-                    width: 250.0,
-                    height: 75.0,
-                    child: ElevatedButton(
-                      style: kStyleElevatedButton,
-                      onPressed: () {
-                        // _launchUrl();
-                        _launchURLBrowser();
-                      },
-                      child: const Text(
-                        'Click For HSA News Letter',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Color(lightBlue),
-                        ),
+                SizedBox(
+                  width: 250.0,
+                  height: 75.0,
+                  child: ElevatedButton(
+                    style: kStyleElevatedButton,
+                    onPressed: () {
+                      _launchURLBrowser();
+                    },
+                    child: const Text(
+                      'Click For Membership Info',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFFFFFFFF),
                       ),
                     ),
                   ),
                 ),
+                membershipTextSection,
               ], //children
             ),
-            aboutHsaSection,
           ], //children
         ),
       ),
     );
   } //Widget
 
-  Widget aboutHsaSection = const Padding(
+  Widget membershipTextSection = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      aboutHsa,
-      style: TextStyle(fontSize: 18, color: Colors.black),
+      membershipText,
+      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(kDarkestBlue)),
       softWrap: true,
     ),
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(kHsaNewsLetterUrl);
+    var url = Uri.parse(kHuestonSailingMembershipUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {

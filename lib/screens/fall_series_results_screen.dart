@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../utilities/constants.dart';
 import '../utilities/widgets.dart';
-import '/utilities/constants.dart';
 
-class RaceResults extends StatefulWidget {
-  static String id = 'race_results_screen';
-  const RaceResults({Key? key}) : super(key: key);
+class FallSeriesRaceResults extends StatefulWidget {
+  static String id = 'fall_series_results_screen';
+  const FallSeriesRaceResults({Key? key}) : super(key: key);
 
   @override
-  State<RaceResults> createState() => _RaceResultsState();
+  State<FallSeriesRaceResults> createState() => _FallSeriesRaceResultsState();
 }
 
-class _RaceResultsState extends State<RaceResults> {
+class _FallSeriesRaceResultsState extends State<FallSeriesRaceResults> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +27,7 @@ class _RaceResultsState extends State<RaceResults> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            '2023 Race Results',
+            '2023 Fall Series Race Results',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(kFontColor),
@@ -53,10 +60,9 @@ class _RaceResultsState extends State<RaceResults> {
                   fit: BoxFit.fitHeight,
                 ),
               ),
-              const ButtonSectionOneWidget(),
-              const ButtonSectionTwoWidget(),
-              const ButtonSectionThreeWidget(),
-              const ButtonSectionFourWidget(),
+              const ButtonSectionHobieFallWidget(),
+              const ButtonSectionYflyerFallWidget(),
+              const ButtonSectionHandicapFallWidget(),
             ],
           ),
         ),

@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import '../models/crew_data.dart';
+import '../models/rc_duty_schedule.dart';
 import '/utilities/constants.dart';
 
-class ScreenNine extends StatefulWidget {
-  static String id = 'screen_nine';
+///  RC Duty
 
-  const ScreenNine({super.key});
+class RaceDutyScreen extends StatefulWidget {
+  static String id = 'race_duty_screen';
+
+  const RaceDutyScreen({super.key});
 
   @override
-  State<ScreenNine> createState() => _ScreenNineState();
+  State<RaceDutyScreen> createState() => _RaceDutyScreenState();
 }
 
-class _ScreenNineState extends State<ScreenNine> {
+class _RaceDutyScreenState extends State<RaceDutyScreen> {
+  // RC Duty Schedule
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +24,7 @@ class _ScreenNineState extends State<ScreenNine> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Crew Roster',
+            'RC Duty Schedule',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -34,18 +37,16 @@ class _ScreenNineState extends State<ScreenNine> {
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
-        itemCount: crewTotalList.length,
+        itemCount: rcDutySchedule.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             decoration: styleBoxDecoration,
             height: kContainerHeight,
-            // color: Colors.white,
-            // color: Colors.amber[colorCodes[index]],
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  crewTotalList[index],
+                  rcDutySchedule[index],
                   style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: kContainerFontHeight, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
                 ),
@@ -58,28 +59,34 @@ class _ScreenNineState extends State<ScreenNine> {
         ),
       ),
       // body: ListView.builder(
-      //   itemCount: crewTotalList.length,
+      //   itemCount: rcDutySchedule.length,
       //   prototypeItem: ListTile(
-      //     title: Text(crewTotalList.first),
+      //     title: Text(rcDutySchedule.first),
       //   ),
       //   itemBuilder: (context, index) {
       //     return Card(
-      //       margin: const EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 10.0),
+      //       margin: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
       //       elevation: 20.0,
-      //       color: const Color(lightestBlue),
+      //       color: Color(lightestBlue),
       //       child: ListTile(
       //         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       //         minVerticalPadding: 0.0,
       //         minLeadingWidth: 0.0,
       //         title: AutoSizeText(
-      //           crewTotalList[index],
+      //           rcDutySchedule[index],
       //           style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: 14, fontWeight: FontWeight.bold),
-      //           maxLines: 5,
+      //           maxLines: 4,
       //           maxFontSize: 16,
-      //           minFontSize: 14,
+      //           minFontSize: 12,
       //           textAlign: TextAlign.left,
-      //           overflow: TextOverflow.visible,
+      //           // overflow: TextOverflow.ellipsis,
       //         ),
+      //         // subtitle: Text(
+      //         //   'subtitle test',
+      //         //   style: TextStyle(
+      //         //     color: Colors.white,
+      //         //   ),
+      //         // ),
       //         tileColor: const Color(darkestBlue),
       //       ),
       //     );

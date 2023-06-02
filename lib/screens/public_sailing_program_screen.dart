@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import '../utilities/widgets.dart';
 import '/utilities/constants.dart';
-import '/controllers/controller_screen_one.dart';
 
-class ScreenThree extends StatefulWidget {
-  static String id = 'screen_three';
+class PublicSailingProgramScreen extends StatefulWidget {
+  static String id = 'public_sailing_program_screen';
 
-  const ScreenThree({super.key});
+  const PublicSailingProgramScreen({super.key});
 
   @override
-  State<ScreenThree> createState() => _ScreenThreeState();
+  State<PublicSailingProgramScreen> createState() => _PublicSailingProgramScreenState();
 }
 
-class _ScreenThreeState extends State<ScreenThree> {
+class _PublicSailingProgramScreenState extends State<PublicSailingProgramScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +78,7 @@ class buttonSection extends StatelessWidget {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonScreenEleven(context),
+                    child: buildElevatedButtonPublicSailingProgram1(context),
                   ),
                 ),
               ),
@@ -88,7 +88,7 @@ class buttonSection extends StatelessWidget {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonScreenTwelve(context),
+                    child: buildElevatedButtonPublicSailingProgram2(context),
                   ),
                 ),
               ),
@@ -104,7 +104,7 @@ class buttonSection extends StatelessWidget {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonScreenThirteen(context),
+                    child: buildElevatedButtonPublicSailingProgram3(context),
                   ),
                 ),
               ),
@@ -114,7 +114,7 @@ class buttonSection extends StatelessWidget {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonScreenFourteen(context),
+                    child: buildElevatedButtonPublicSailingProgram4(context),
                   ),
                 ),
               ),

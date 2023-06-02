@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import '../models/social_calendar.dart';
+import '../models/race_schedule.dart';
 import '/utilities/constants.dart';
 
-class ScreenFive extends StatefulWidget {
-  static String id = 'screen_five';
+class RaceScheduleScreen extends StatefulWidget {
+  static String id = 'race_schedule_screen';
 
-  const ScreenFive({super.key});
+  const RaceScheduleScreen({super.key});
 
   @override
-  State<ScreenFive> createState() => _ScreenFiveState();
+  State<RaceScheduleScreen> createState() => _RaceScheduleScreenState();
 }
 
-class _ScreenFiveState extends State<ScreenFive> {
-  // Social
+class _RaceScheduleScreenState extends State<RaceScheduleScreen> {
+  // Race Schedule
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _ScreenFiveState extends State<ScreenFive> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Social Events Calendar',
+            'Race Schedule',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -35,7 +35,7 @@ class _ScreenFiveState extends State<ScreenFive> {
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
-        itemCount: socialCalendarText.length,
+        itemCount: raceAndRcSchedule.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             decoration: styleBoxDecoration,
@@ -44,7 +44,7 @@ class _ScreenFiveState extends State<ScreenFive> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  socialCalendarText[index],
+                  raceAndRcSchedule[index],
                   style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: kContainerFontHeight, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
                 ),

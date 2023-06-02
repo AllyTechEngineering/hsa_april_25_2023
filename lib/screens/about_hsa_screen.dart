@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenTwelve extends StatefulWidget {
-  static String id = 'screen_twelve';
+class AboutHsaScreen extends StatefulWidget {
+  static String id = 'about_hsa_screen';
 
-  const ScreenTwelve({super.key});
+  const AboutHsaScreen({super.key});
 
   @override
-  State<ScreenTwelve> createState() => _ScreenTwelveState();
+  State<AboutHsaScreen> createState() => _AboutHsaScreenState();
 }
 
-class _ScreenTwelveState extends State<ScreenTwelve> {
+class _AboutHsaScreenState extends State<AboutHsaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ScreenTwelveState extends State<ScreenTwelve> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            kPublicSailingProgramTwoText,
+            'About Hueston Sailing Assn.',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -47,6 +47,16 @@ class _ScreenTwelveState extends State<ScreenTwelve> {
               children: [
                 const Padding(
                   padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'About HSA',
+                    softWrap: true,
+                    style: TextStyle(
+                      fontFamily: kFontTypeForApp,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
                 // aboutHsaSection,
                 Padding(
@@ -61,7 +71,7 @@ class _ScreenTwelveState extends State<ScreenTwelve> {
                         _launchURLBrowser();
                       },
                       child: const Text(
-                        kPublicSailingProgramTwoText,
+                        'Click For HSA News Letter',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(lightBlue),
@@ -72,38 +82,28 @@ class _ScreenTwelveState extends State<ScreenTwelve> {
                 ),
               ], //children
             ),
-            publicSailingProgram,
+            aboutHsaSection,
           ], //children
         ),
       ),
     );
   } //Widget
 
-  Widget publicSailingProgram = const Padding(
+  Widget aboutHsaSection = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      kLearnToSailText,
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+      aboutHsa,
+      style: TextStyle(fontSize: 18, color: Colors.black),
       softWrap: true,
     ),
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(kHuestonSailingLearningUrl);
+    var url = Uri.parse(kHsaNewsLetterUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
-      throw showDialog(
-        context: context,
-        builder: (_) => const AlertDialog(
-          title: Text(
-            'No Internet connection',
-            style: TextStyle(color: Colors.redAccent),
-          ),
-          elevation: 20,
-          backgroundColor: Colors.black,
-        ),
-      );
+      throw 'Could not launch $url';
     } //else
   } //_launchURLBrowser
 } //class

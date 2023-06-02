@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenThirteen extends StatefulWidget {
-  static String id = 'screen_thirteen';
+class IntroToSailingScreen extends StatefulWidget {
+  static String id = 'intro_to_sailing_screen';
 
-  const ScreenThirteen({super.key});
+  const IntroToSailingScreen({super.key});
 
   @override
-  State<ScreenThirteen> createState() => _ScreenThirteenState();
+  State<IntroToSailingScreen> createState() => _IntroToSailingScreenState();
 }
 
-class _ScreenThirteenState extends State<ScreenThirteen> {
+class _IntroToSailingScreenState extends State<IntroToSailingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            kPublicSailingProgramThreeText,
+            'Introduction to Sailing',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -44,11 +44,10 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: <Widget>[
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                 ),
-                // aboutHsaSection,
                 Padding(
                   padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
                   child: SizedBox(
@@ -61,7 +60,7 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
                         _launchURLBrowser();
                       },
                       child: const Text(
-                        kPublicSailingProgramThreeText,
+                        kPublicSailingProgramOneText,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(lightBlue),
@@ -70,9 +69,9 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
                     ),
                   ),
                 ),
+                publicSailingProgram,
               ], //children
             ),
-            publicSailingProgram,
           ], //children
         ),
       ),
@@ -82,14 +81,14 @@ class _ScreenThirteenState extends State<ScreenThirteen> {
   Widget publicSailingProgram = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      kJuniorSailingCampText,
+      kIntroToSailText,
       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
       softWrap: true,
     ),
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(kJuniorSailingCampUrl);
+    var url = Uri.parse(kHuestonSailingLearningUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {

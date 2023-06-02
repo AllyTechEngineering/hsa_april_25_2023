@@ -2,8 +2,8 @@
 "header" : {
 "version" : "2.29.6",
 "generator" : "sailwave",
-"date" : "22/05/23",
-"time" : " 7:45:58"
+"date" : "30/05/23",
+"time" : " 7:03:09"
 },
 "globals" : {
 "serallowfixedflights" : "0",
@@ -28,7 +28,7 @@
 "serincludestarttimes" : "0",
 "serincludefinishtimes" : "0",
 "serincludecorrected" : "0",
-"serincludedncs" : "0",
+"serincludedncs" : "1",
 "serincludespeed" : "0",
 "serincludeewin" : "0",
 "serincluderwin" : "0",
@@ -64,9 +64,9 @@
 "serdecretcolumns" : "Date, Race, Class/SailNo, Ret Code, Initials",
 "serdecretrows" : "25",
 "serpubincluderacetables" : "0",
-"serevent" : "HSA Hobie/Cat 2023 Spring Series",
+"serevent" : "HSA Y-Flyer 2023 Memorial Day Series",
 "servenue" : "Hueston Sailing Association",
-"sertitle" : "Results are final as of @ on #,Results are provisional as of @ on #,2011 Fall Series,2010 Spring Series,2009 Fall",
+"sertitle" : "Results as of @ on #,Results are provisional as of @ on #,Results are final as of @ on #,2011 Fall Series,2010 Spring Series,2009 Fall",
 "serpubflightrace" : "1",
 "serscoringhandle" : "17",
 "sersortcol" : "2",
@@ -76,7 +76,6 @@
 "serlistface" : "Arial",
 "serlistsize" : "10",
 "serlistcolour" : "0",
-"sersavehtmlpath" : "S:\\Dell Laptop Documents\\Sailwave\\23Spring-Hobie.htm",
 "serelapsedview" : "3"
 },
 "scoring-systems" : {
@@ -112,12 +111,12 @@
 "scrpointsplaces" : "0",
 "scrpointsaccumulation" : "Sum",
 "scrpointssystem" : "Low point",
-"scrratingsystem" : "USPN",
+"scrratingsystem" : "SBR",
 "scrratingvalue" : "No",
 "scrwindstrengths" : "0-1,2-3,4,5-9",
 "scrupdateratings" : "No",
 "scrbackcalcpercent" : "0",
-"scrdiscardlist" : "0,0,0,0,1,2,3",
+"scrdiscardlist" : "0,0,0,0",
 "scrflights" : "No",
 "scrfinals" : "No",
 "scrfinalsstickyq" : "No",
@@ -303,25 +302,79 @@
 "prizes" : {
 },
 "competitors" : {
-"1" : {
-"comptotal" : "0",
-"compnett" : "0",
-"comprank" : "1",
-"compsailno" : "TBD",
-"compclass" : "TBD",
-"compfleet" : "TBD",
-"compnotes" : "TBD",
+  "56" : {
+    "comptotal" : "20",
+    "compnett" : "20",
+    "comprank" : "5",
+    "compsailno" : "2537",
+    "compclass" : "Y-Flyer",
+    "compexclude" : "0",
+    "compalias" : "0",
+    "compmedicalflag" : "0",
+    "comphelmname" : "Eric Anderson",
+    "compcrewname" : "Lauren Anderson",
+    "comphigh" : "0"
+  },
+  "49" : {
+    "comptotal" : "18",
+    "compnett" : "18",
+    "comprank" : "4",
+    "compsailno" : "2592",
+    "compclass" : "Y-Flyer",
+    "compexclude" : "0",
+    "compalias" : "0",
+    "compmedicalflag" : "0",
+    "comphelmname" : "Scott Eversole",
+    "compcrewname" : "Makenna Eversole",
+    "comphigh" : "0"
+  },
+"11" : {
+"comptotal" : "15",
+"compnett" : "15",
+"compboat" : "Summerfair",
+"comprank" : "3",
+"compsailno" : "2699",
+"compclass" : "Y-Flyer",
+"compclub" : "HSA",
+"comptally" : "1",
 "compexclude" : "0",
 "compalias" : "0",
-"comprating" : "TBD",
 "compmedicalflag" : "0",
-"comphelmname" : "TBD",
-"compcrewname" : "TBD",
+"comphelmname" : "Roger Henthorn",
+"compcrewname" : "Bobbie Bode",
 "comphigh" : "0"
-}
+},
+"62" : {
+"comptotal" : "8",
+"compnett" : "8",
+"comprank" : "2",
+"compsailno" : "2731",
+"compclass" : "Y-Flyer",
+"compclub" : "HSA",
+"comptally" : "5",
+"compexclude" : "0",
+"compalias" : "0",
+"compmedicalflag" : "0",
+"comphelmname" : "Charlie DeArmon",
+"compcrewname" : "Amy Marks",
+"comphigh" : "0"
+},
+  "37" : {
+    "comptotal" : "7",
+    "compnett" : "7",
+    "comprank" : "1",
+    "compsailno" : "2740",
+    "compclass" : "Y-Flyer",
+    "compexclude" : "0",
+    "compalias" : "0",
+    "compmedicalflag" : "0",
+    "comphelmname" : "Mike Stratton",
+    "compcrewname" : "Cosette",
+    "comphigh" : "0"
+  }
 },
 "races" : {
-"2" : {
+"1" : {
 "racerank" : "1",
 "racesailed" : "1",
 "starts" : {
@@ -337,42 +390,14 @@
 },
 "26" : {
 "racerank" : "3",
-"racesailed" : "0",
+"racesailed" : "1",
 "starts" : {
 "1" : "||Place|Start 1|||0||0|0||||1"
 }
 },
 "27" : {
 "racerank" : "4",
-"racesailed" : "0",
-"starts" : {
-"1" : "||Place|Start 1|||0||0|0||||1"
-}
-},
-"28" : {
-"racerank" : "5",
-"racesailed" : "0",
-"starts" : {
-"1" : "||Place|Start 1|||0||0|0||||1"
-}
-},
-"29" : {
-"racerank" : "6",
-"racesailed" : "0",
-"starts" : {
-"1" : "||Place|Start 1|||0||0|0||||1"
-}
-},
-"50" : {
-"racerank" : "7",
-"racesailed" : "0",
-"starts" : {
-"1" : "||Place|Start 1|||0||0|0||||1"
-}
-},
-"59" : {
-"racerank" : "8",
-"racesailed" : "0",
+"racesailed" : "1",
 "starts" : {
 "1" : "||Place|Start 1|||0||0|0||||1"
 }
@@ -380,282 +405,222 @@
 },
 "results" : {
 "1" : {
-"comHandle" : "55",
+"comHandle" : "11",
 "racHandle" : "1",
 "rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
+"rpts" : "6",
+"rpos" : "5",
 "rdisc" : "0",
 "rrestyp" : "3",
 "srat" : "0",
 "rrset" : "1"
 },
 "2" : {
-"comHandle" : "55",
+"comHandle" : "11",
 "racHandle" : "2",
 "rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
+"rpts" : "6",
+"rpos" : "5",
 "rdisc" : "0",
 "rrestyp" : "3",
 "srat" : "0",
 "rrset" : "1"
 },
 "3" : {
-"comHandle" : "55",
+"comHandle" : "11",
 "racHandle" : "26",
+"rpts" : "2",
+"rpos" : "2",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "2",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "4" : {
-"comHandle" : "55",
+"comHandle" : "11",
 "racHandle" : "27",
+"rpts" : "1",
+"rpos" : "1",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "1",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "5" : {
-"comHandle" : "55",
-"racHandle" : "28",
+"comHandle" : "37",
+"racHandle" : "1",
+"rpts" : "1",
+"rpos" : "1",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "1",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "6" : {
-"comHandle" : "55",
-"racHandle" : "29",
+"comHandle" : "37",
+"racHandle" : "2",
+"rpts" : "2",
+"rpos" : "2",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "2",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "7" : {
-"comHandle" : "55",
-"racHandle" : "50",
+"comHandle" : "37",
+"racHandle" : "26",
+"rpts" : "1",
+"rpos" : "1",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "1",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "8" : {
-"comHandle" : "55",
-"racHandle" : "59",
+"comHandle" : "37",
+"racHandle" : "27",
+"rpts" : "3",
+"rpos" : "3",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "3",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "9" : {
-"comHandle" : "56",
+"comHandle" : "49",
 "racHandle" : "1",
-"rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
+"rpts" : "3",
+"rpos" : "3",
 "rdisc" : "0",
-"rrestyp" : "3",
+"rrecpos" : "3",
+"rrestyp" : "1",
 "srat" : "0",
-"rrset" : "1"
+"rrset" : "0"
 },
 "10" : {
-"comHandle" : "56",
+"comHandle" : "49",
 "racHandle" : "2",
+"rpts" : "3",
+"rpos" : "3",
+"rdisc" : "0",
+"rrecpos" : "3",
+"rrestyp" : "1",
+"srat" : "0",
+"rrset" : "0"
+},
+"11" : {
+"comHandle" : "49",
+"racHandle" : "26",
 "rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
+"rpts" : "6",
+"rpos" : "4",
 "rdisc" : "0",
 "rrestyp" : "3",
 "srat" : "0",
 "rrset" : "1"
 },
-"11" : {
-"comHandle" : "56",
-"racHandle" : "26",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
 "12" : {
-"comHandle" : "56",
+"comHandle" : "49",
 "racHandle" : "27",
+"rcod" : "DNC",
+"rpts" : "6",
+"rpos" : "4",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrestyp" : "3",
 "srat" : "0",
-"rrset" : "0"
+"rrset" : "1"
 },
 "13" : {
 "comHandle" : "56",
-"racHandle" : "28",
+"racHandle" : "1",
+"rpts" : "4",
+"rpos" : "4",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "4",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "14" : {
 "comHandle" : "56",
-"racHandle" : "29",
+"racHandle" : "2",
+"rpts" : "4",
+"rpos" : "4",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "4",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "15" : {
 "comHandle" : "56",
-"racHandle" : "50",
+"racHandle" : "26",
+"rcod" : "DNC",
+"rpts" : "6",
+"rpos" : "4",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrestyp" : "3",
 "srat" : "0",
-"rrset" : "0"
+"rrset" : "1"
 },
 "16" : {
 "comHandle" : "56",
-"racHandle" : "59",
+"racHandle" : "27",
+"rcod" : "DNC",
+"rpts" : "6",
+"rpos" : "4",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrestyp" : "3",
+"srat" : "0",
+"rrset" : "1"
+},
+"17" : {
+"comHandle" : "62",
+"racHandle" : "1",
+"rpts" : "2",
+"rpos" : "2",
+"rdisc" : "0",
+"rrecpos" : "2",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
-"17" : {
-"comHandle" : "57",
-"racHandle" : "1",
-"rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
-"rdisc" : "0",
-"rrestyp" : "3",
-"srat" : "0",
-"rrset" : "1"
-},
 "18" : {
-"comHandle" : "57",
+"comHandle" : "62",
 "racHandle" : "2",
-"rcod" : "DNC",
-"rpts" : "5",
-"rpos" : "2",
+"rpts" : "1",
+"rpos" : "1",
 "rdisc" : "0",
-"rrestyp" : "3",
+"rrecpos" : "1",
+"rrestyp" : "1",
 "srat" : "0",
-"rrset" : "1"
+"rrset" : "0"
 },
 "19" : {
-"comHandle" : "57",
+"comHandle" : "62",
 "racHandle" : "26",
+"rpts" : "3",
+"rpos" : "3",
 "rdisc" : "0",
-"rrestyp" : "0",
+"rrecpos" : "3",
+"rrestyp" : "1",
 "srat" : "0",
 "rrset" : "0"
 },
 "20" : {
-"comHandle" : "57",
+"comHandle" : "62",
 "racHandle" : "27",
+"rpts" : "2",
+"rpos" : "2",
 "rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"21" : {
-"comHandle" : "57",
-"racHandle" : "28",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"22" : {
-"comHandle" : "57",
-"racHandle" : "29",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"23" : {
-"comHandle" : "57",
-"racHandle" : "50",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"24" : {
-"comHandle" : "57",
-"racHandle" : "59",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"25" : {
-"comHandle" : "58",
-"racHandle" : "1",
-"rpts" : "1",
-"rpos" : "1",
-"rdisc" : "0",
-"rrecpos" : "1",
+"rrecpos" : "2",
 "rrestyp" : "1",
-"srat" : "0",
-"rrset" : "0"
-},
-"26" : {
-"comHandle" : "58",
-"racHandle" : "2",
-"rpts" : "1",
-"rpos" : "1",
-"rdisc" : "0",
-"rrecpos" : "1",
-"rrestyp" : "1",
-"srat" : "0",
-"rrset" : "0"
-},
-"27" : {
-"comHandle" : "58",
-"racHandle" : "26",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"28" : {
-"comHandle" : "58",
-"racHandle" : "27",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"29" : {
-"comHandle" : "58",
-"racHandle" : "28",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"30" : {
-"comHandle" : "58",
-"racHandle" : "29",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"31" : {
-"comHandle" : "58",
-"racHandle" : "50",
-"rdisc" : "0",
-"rrestyp" : "0",
-"srat" : "0",
-"rrset" : "0"
-},
-"32" : {
-"comHandle" : "58",
-"racHandle" : "59",
-"rdisc" : "0",
-"rrestyp" : "0",
 "srat" : "0",
 "rrset" : "0"
 }
@@ -672,7 +637,7 @@
 "9" : "1|CrewEmail|36|No|No|40||",
 "10" : "1|CrewId|35|No|No|40||",
 "11" : "1|CrewMemberNo|32|No|No|40||",
-"12" : "1|CrewName|31|No|No|63||",
+"12" : "1|CrewName|31|Yes|Yes|99|Crew|",
 "13" : "1|CrewNotes|51|No|No|40||",
 "14" : "1|CrewPhone|33|No|No|40||",
 "15" : "1|CrewPhoto|34|No|No|40||",
@@ -708,7 +673,7 @@
 "45" : "1|Status|61|No|No|40||",
 "46" : "1|Tally|6|No|No|40||",
 "47" : "1|Total|81|Yes|Yes|40||",
-"48" : "2||75|Yes|Yes|49||",
+"48" : "2||75|Yes|Yes|43||",
 "49" : "3||1000|Yes|No|40|BLANK|",
 "50" : "1|Alias|3|Yes|No|10|BLANK|",
 "51" : "1|Flight|10|No|No|40||",

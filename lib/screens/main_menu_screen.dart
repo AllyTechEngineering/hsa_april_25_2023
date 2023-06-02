@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../utilities/widgets.dart';
 import '/utilities/constants.dart';
-import '/controllers/controller_screen_one.dart';
 
-class ScreenOne extends StatefulWidget {
-  static String id = 'screen_one';
+class MainMenuScreen extends StatefulWidget {
+  static String id = 'main_menu_screen';
 
-  const ScreenOne({super.key});
+  const MainMenuScreen({super.key});
 
   @override
-  State<ScreenOne> createState() => _ScreenOneState();
+  State<MainMenuScreen> createState() => _MainMenuScreenState();
 } //class ScreenOne
 
-class _ScreenOneState extends State<ScreenOne> {
+class _MainMenuScreenState extends State<MainMenuScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buttonSectionOne = Padding(
@@ -30,7 +30,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: SizedBox(
                     width: kWidthElevatedButton,
                     height: kHeightElevatedButton,
-                    child: buildElevatedButtonScreenTwo(context),
+                    child: buildElevatedButtonNewsAndAboutScreen(context),
                   ),
                 ),
               ),
@@ -45,7 +45,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenThree(context),
+                  child: buildElevatedButtonPublicSailingProgramsScreen(context),
                 ),
               ),
             ], //children
@@ -59,7 +59,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenFour(context),
+                  child: buildElevatedButtonMembershipScreen(context),
                 ),
               ),
             ], //children
@@ -81,7 +81,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenFive(context),
+                  child: buildElevatedButtonSocialEventsScreen(context),
                 ),
               ),
             ], //children
@@ -95,7 +95,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenSix(context),
+                  child: buildElevatedButtonRaceScheduleScreen(context),
                 ),
               ),
             ], //children
@@ -109,7 +109,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenSeven(context),
+                  child: buildElevatedButtonRcDutyScreen(context),
                 ),
               ),
             ], //children
@@ -131,7 +131,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenEight(context),
+                  child: buildElevatedButtonRaceResultsScreen(context),
                 ),
               ),
             ], //children
@@ -145,7 +145,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenNine(context),
+                  child: buildElevatedButtonCrewRoster(context),
                 ),
               ),
             ], //children
@@ -159,7 +159,7 @@ class _ScreenOneState extends State<ScreenOne> {
                 child: SizedBox(
                   width: kWidthElevatedButton,
                   height: kHeightElevatedButton,
-                  child: buildElevatedButtonScreenTen(context),
+                  child: buildElevatedButtonForSale(context),
                 ),
               ),
             ], //children

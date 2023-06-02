@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
-// import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenFour extends StatefulWidget {
-  static String id = 'screen_four';
+class PublicSailing3Screen extends StatefulWidget {
+  static String id = 'public_sailing_3_screen';
 
-  const ScreenFour({super.key});
+  const PublicSailing3Screen({super.key});
 
   @override
-  State<ScreenFour> createState() => _ScreenFourState();
+  State<PublicSailing3Screen> createState() => _PublicSailing3ScreenState();
 }
 
-class _ScreenFourState extends State<ScreenFour> {
+class _PublicSailing3ScreenState extends State<PublicSailing3Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,7 @@ class _ScreenFourState extends State<ScreenFour> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Membership',
+            kPublicSailingProgramThreeText,
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -48,58 +47,63 @@ class _ScreenFourState extends State<ScreenFour> {
               children: [
                 const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'Join the Club!',
-                    softWrap: true,
-                    style: TextStyle(
-                      fontFamily: kFontTypeForApp,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Colors.black,
-                    ),
-                  ),
                 ),
-                SizedBox(
-                  width: 250.0,
-                  height: 75.0,
-                  child: ElevatedButton(
-                    style: kStyleElevatedButton,
-                    onPressed: () {
-                      _launchURLBrowser();
-                    },
-                    child: const Text(
-                      'Click For Membership Info',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
+                // aboutHsaSection,
+                Padding(
+                  padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
+                  child: SizedBox(
+                    width: 250.0,
+                    height: 75.0,
+                    child: ElevatedButton(
+                      style: kStyleElevatedButton,
+                      onPressed: () {
+                        // _launchUrl();
+                        _launchURLBrowser();
+                      },
+                      child: const Text(
+                        kPublicSailingProgramThreeText,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(lightBlue),
+                        ),
                       ),
                     ),
                   ),
                 ),
-                membershipTextSection,
               ], //children
             ),
+            publicSailingProgram,
           ], //children
         ),
       ),
     );
   } //Widget
 
-  Widget membershipTextSection = const Padding(
+  Widget publicSailingProgram = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      membershipText,
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(kDarkestBlue)),
+      kJuniorSailingCampText,
+      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
       softWrap: true,
     ),
   );
 
   _launchURLBrowser() async {
-    var url = Uri.parse(kHuestonSailingMembershipUrl);
+    var url = Uri.parse(kJuniorSailingCampUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
-      throw 'Could not launch $url';
+      throw showDialog(
+        context: context,
+        builder: (_) => const AlertDialog(
+          title: Text(
+            'No Internet connection',
+            style: TextStyle(color: Colors.redAccent),
+          ),
+          elevation: 20,
+          backgroundColor: Colors.black,
+        ),
+      );
     } //else
   } //_launchURLBrowser
 } //class

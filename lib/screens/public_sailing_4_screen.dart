@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenFourteen extends StatefulWidget {
-  static String id = 'screen_fourteen';
+class PublicSailing4Screen extends StatefulWidget {
+  static String id = 'public_sailing_4_screen';
 
-  const ScreenFourteen({super.key});
+  const PublicSailing4Screen({super.key});
 
   @override
-  State<ScreenFourteen> createState() => _ScreenFourteenState();
+  State<PublicSailing4Screen> createState() => _PublicSailing4ScreenState();
 }
 
-class _ScreenFourteenState extends State<ScreenFourteen> {
+class _PublicSailing4ScreenState extends State<PublicSailing4Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

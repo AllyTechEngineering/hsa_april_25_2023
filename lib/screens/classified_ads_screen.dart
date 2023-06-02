@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../models/for_sale.dart';
 import '/utilities/constants.dart';
 
-class ScreenTen extends StatefulWidget {
-  static String id = 'screen_ten';
+class ClassifiedAdsScreen extends StatefulWidget {
+  static String id = 'classified_ads_screen';
 
-  const ScreenTen({super.key});
+  const ClassifiedAdsScreen({super.key});
 
   @override
-  State<ScreenTen> createState() => _ScreenTenState();
+  State<ClassifiedAdsScreen> createState() => _ClassifiedAdsScreenState();
 }
 
-class _ScreenTenState extends State<ScreenTen> {
+class _ClassifiedAdsScreenState extends State<ClassifiedAdsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ScreenTenState extends State<ScreenTen> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'For Sale',
+            'Classified Ads',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),

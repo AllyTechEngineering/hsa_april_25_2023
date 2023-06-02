@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import '../models/race_schedule.dart';
+import '../models/crew_data.dart';
 import '/utilities/constants.dart';
 
-class ScreenSix extends StatefulWidget {
-  static String id = 'screen_six';
+class CrewRosterScreen extends StatefulWidget {
+  static String id = 'crew_roster_screen';
 
-  const ScreenSix({super.key});
+  const CrewRosterScreen({super.key});
 
   @override
-  State<ScreenSix> createState() => _ScreenSixState();
+  State<CrewRosterScreen> createState() => _CrewRosterScreenState();
 }
 
-class _ScreenSixState extends State<ScreenSix> {
-  // Race Schedule
+class _CrewRosterScreenState extends State<CrewRosterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,7 @@ class _ScreenSixState extends State<ScreenSix> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Race Schedule',
+            'Crew Roster',
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -33,19 +32,20 @@ class _ScreenSixState extends State<ScreenSix> {
           ),
         ),
       ),
-
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
-        itemCount: raceAndRcSchedule.length,
+        itemCount: crewTotalList.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             decoration: styleBoxDecoration,
             height: kContainerHeight,
+            // color: Colors.white,
+            // color: Colors.amber[colorCodes[index]],
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  raceAndRcSchedule[index],
+                  crewTotalList[index],
                   style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: kContainerFontHeight, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
                 ),
@@ -58,29 +58,27 @@ class _ScreenSixState extends State<ScreenSix> {
         ),
       ),
       // body: ListView.builder(
-      //   itemCount: raceAndRcSchedule.length,
+      //   itemCount: crewTotalList.length,
       //   prototypeItem: ListTile(
-      //     title: Text(raceAndRcSchedule.first),
+      //     title: Text(crewTotalList.first),
       //   ),
       //   itemBuilder: (context, index) {
       //     return Card(
-      //       margin: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 10.0),
+      //       margin: const EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 10.0),
       //       elevation: 20.0,
-      //       color: Color(lightestBlue),
+      //       color: const Color(lightestBlue),
       //       child: ListTile(
-      //         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)), minVerticalPadding: 0.0,
-      //         // leading: Icon(
-      //         //   Icons.calendar_month,
-      //         //   color: Colors.white,
-      //         // ),
+      //         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      //         minVerticalPadding: 0.0,
+      //         minLeadingWidth: 0.0,
       //         title: AutoSizeText(
-      //           raceAndRcSchedule[index],
-      //           style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: 16, fontWeight: FontWeight.bold),
-      //           maxLines: 4,
-      //           maxFontSize: 18,
+      //           crewTotalList[index],
+      //           style: const TextStyle(color: Color(kFontColor), fontFamily: kFontTypeForApp, fontSize: 14, fontWeight: FontWeight.bold),
+      //           maxLines: 5,
+      //           maxFontSize: 16,
       //           minFontSize: 14,
       //           textAlign: TextAlign.left,
-      //           // overflow: TextOverflow.ellipsis,
+      //           overflow: TextOverflow.visible,
       //         ),
       //         tileColor: const Color(darkestBlue),
       //       ),

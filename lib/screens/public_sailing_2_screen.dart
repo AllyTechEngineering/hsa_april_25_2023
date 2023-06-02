@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ScreenEleven extends StatefulWidget {
-  static String id = 'screen_eleven';
+class PublicSailing2Screen extends StatefulWidget {
+  static String id = 'public_sailing_2_screen';
 
-  const ScreenEleven({super.key});
+  const PublicSailing2Screen({super.key});
 
   @override
-  State<ScreenEleven> createState() => _ScreenElevenState();
+  State<PublicSailing2Screen> createState() => _PublicSailing2ScreenState();
 }
 
-class _ScreenElevenState extends State<ScreenEleven> {
+class _PublicSailing2ScreenState extends State<PublicSailing2Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ScreenElevenState extends State<ScreenEleven> {
         title: const FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
-            'Introduction to Sailing',
+            kPublicSailingProgramTwoText,
             style: TextStyle(
               fontFamily: kFontTypeForApp,
               color: Color(lightBlue),
@@ -44,10 +44,11 @@ class _ScreenElevenState extends State<ScreenEleven> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
+              children: [
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                 ),
+                // aboutHsaSection,
                 Padding(
                   padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
                   child: SizedBox(
@@ -60,7 +61,7 @@ class _ScreenElevenState extends State<ScreenEleven> {
                         _launchURLBrowser();
                       },
                       child: const Text(
-                        kPublicSailingProgramOneText,
+                        kPublicSailingProgramTwoText,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(lightBlue),
@@ -69,9 +70,9 @@ class _ScreenElevenState extends State<ScreenEleven> {
                     ),
                   ),
                 ),
-                publicSailingProgram,
               ], //children
             ),
+            publicSailingProgram,
           ], //children
         ),
       ),
@@ -81,7 +82,7 @@ class _ScreenElevenState extends State<ScreenEleven> {
   Widget publicSailingProgram = const Padding(
     padding: EdgeInsets.all(20.0),
     child: Text(
-      kIntroToSailText,
+      kLearnToSailText,
       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
       softWrap: true,
     ),
